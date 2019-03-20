@@ -1,0 +1,64 @@
+{
+  "website":{
+    "title": "BR(BitReserve)基金会"
+  },
+  "nav":{
+    "home": "首页",
+    "about_me": "关于",
+    "skills": "技能",
+    "projects": "项目",
+    "career": "发展历程",
+    "blog": "新闻",
+    "link": "友情链接"
+  },
+
+  "about_me":{
+    "video": "关于我们 - 视频",
+    "about_me": "11111关于BR(BitReserve)基金会",
+    "des": "BitReserve基金会简称BR基金会，于X年X🈷️X日在新加坡注册成立。是全球多国民间组织联合成立的数字货币基金组织，致力于打破传统中心化金融领域的垄断地位，为用户提供更公平，便捷，安全的民间金融应用需求，BR基金会的核心主要为建立全球稳定的数字货币CUSD, 在全球各地发展CUSD的支持者，把CUSD打造成为全球最具影响力的稳定数字货币，为世界各地支持者提供安全稳定的金融应用工具。"
+  },
+  "home_banner":{
+    "descc": "3333BR (BitReserve) Foundation 基金会 ",
+    "desccc": "BR (BitReserve) Foundation"
+  },
+  "skills":{
+    "my_skills": "我的技能"
+  },
+  "projects":{
+    "my_projects": "项目",
+    "saplatform": "Saplatform是一个自动化运维服务，包括资产管理、项目发布、数据库管理等功能,它可以管理大量服务器。",
+    "jalpc": "Jalpc是一个非常简洁、漂亮和快速部署的Jekyll主题，它有非常全面的功能，可以很方便的修改和使用，适应多种设备。",
+    "angularjs": "这是一个Angularjs写的前端应用，使用Jelyll部署在github的gh-pages上，后台使用Leancloud，你也可以使用Parse。",
+    "imgkit": "IMGKit是一个Python 2/3 的库，使用它我们可以将网页转换成图片，输入可以是网址，HTML文件或者字符串。",
+    "rsser": "Rsser是一个Ionic应用，在这个应用下，我们可以自由的阅读新闻和文章，你可以从给定的列表中添加rss地址也可以手动添加。",
+    "familycode": "这是一个销售基因检测产品的微信商城。我使用Django和jQuery weui写这个项目. 这是明码的主要项目，你可以通过微信扫码二维码查看这个项目。",
+    "ztool": "Z-Tool是为我自己写的一个项目，我们可以使用电脑/微信小程序查询一些有用的信息。前端是用VueJS/微信小程序框架实现，后台是通过Flask提供API。"
+  },
+  "career":{
+    "my_career": "发展历程",
+    "nextcode": "Nextcode",
+    "nextcode_des": "现在我在Nextcode，使用Python为基因分析项目做网站.",
+    "nextcode_date": "2016年4月",
+    "nextcode_job": "Python工程师",
+    "netease": "网易游戏",
+    "netease_des": "在网易游戏，我了解到游戏体系，并使用Python代码为自动化运维服务.",
+    "netease_date": "2015年6月",
+    "netease_job": "运维开发工程师",
+    "ucloud": "Ucloud",
+    "ucloud_des": "在Ucloud,我开始和服务器、操作系统打交道，并使用shell脚本管理海量服务器.",
+    "ucloud_date": "2014年2月",
+    "ucloud_job": "运维开发工程师",
+    "college": "毕业",
+    "college_des": "2013年7月大学毕业，开始了IT职业生涯",
+    "college_date": "2013年7月",
+    "college_job": "学生"
+  },
+  "blog":{
+    "my_blog": "新闻"
+  },
+  "link":{
+    "link": "友情链接",
+    "view": "次访问"
+  }
+
+}

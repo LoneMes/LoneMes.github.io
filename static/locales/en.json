@@ -1,0 +1,63 @@
+{
+  "website":{
+    "title": "BR(BitReserve) Foundation"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Development History",
+    "blog": "Newsroom",
+    "link": "Link"
+  },
+  "home_banner":{
+    "descc": "3333BR (BitReserve) Foundation 00000 ",
+    "desccc": "BR (BitReserve) Foundation"
+  },
+  "about_me":{
+    "video": "About us - Video",
+    "about_me": "About BR (BitReserve) Foundation",
+    "des": "BitReserve (a.k.a BR) is a Singapore based Foundation registered on (日期). BR is a civil oriented, multi-nation crypto currency organization, committed to breaking the monopoly of tradional centralized cooperations in the financial sector, and to satisfy end users need in financial applications by providing them a more fair, more convenient, and more secure environment. The core of the BR foundation is to establish and maintain a global-wise stable crypto currency, CUSD, and to develop CUSD supporters on a global scale to make CUSD the most influencial stable coin through the world, which could be further utilized by global end users as a secure and stable fincial application tool.    "
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "Projects",
+    "saplatform": "Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.",
+    "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.",
+    "angularjs": "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.",
+    "imgkit": "IMGKit is a Python 2/3 library which wrapper wkhtmltoimage utility to convert HTML to image using Webkit, input can be URLs, HTML files and string.",
+    "rsser": "Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually.",
+    "familycode": "This is a shopping mall in wechat, it promotes gene detection. Since time is precious, I write this website with Django, jQuery, weui. This is WuxiNextcode's major product. You can scan project's picture by wechat.",
+    "ztool": "Z-Tool is a personal project for myself, we can use PC/WeChat to query some information. Front end is written by VueJS/WeChat mini app framework, backend API is written by Flask."
+  },
+  "career":{
+    "my_career": "Development History",
+    "nextcode": "Nextcode",
+    "nextcode_des": "Now I am in Nextcode and develop website with Python code for genetic analysis.",
+    "nextcode_date": "Apr. 2016",
+    "nextcode_job": "Python Developer",
+    "netease": "Netease Game",
+    "netease_des": "In Netease game, I learned game service system and use Python code for ops.",
+    "netease_date": "Jun. 2015",
+    "netease_job": "Dev Ops",
+    "ucloud": "Ucloud",
+    "ucloud_des": "In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.",
+    "ucloud_date": "Feb. 2014",
+    "ucloud_job": "Dev Ops",
+    "college": "Graduation",
+    "college_des": "At July 2013,I graduated from college and started my IT technology tour.",
+    "college_date": "Jul. 2013",
+    "college_job": "Student"
+  },
+  "blog":{
+    "my_blog": "Newsroom"
+  },
+  "link":{
+    "link": "Link",
+    "view": "views"
+  }
+
+}
