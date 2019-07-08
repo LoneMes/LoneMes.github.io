@@ -1,0 +1,203 @@
+body{
+		background-color:#111;
+		}
+	#boss{
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:50px;
+		height:50px;
+		margin-left:-25px;
+		margin-top:-25px;
+		-webkit-perspective:600px;
+		}
+	#bossxh{
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:300px;
+		height:30px;
+		line-height:30px;
+		margin-left:-140px;
+		margin-top:-12px;
+		}
+	#box{
+		position:absolute;
+		width:50px;
+		height:50px;
+		top:0px;
+		left:0px;
+		-webkit-transform-style:preserve-3d;
+		-webkit-animation:run 2s linear infinite;
+		-webkit-animation-play-state:paused;
+		-moz-transform-style:preserve-3d;
+		-moz-animation:run 2s linear infinite;
+		-moz-animation-play-state:paused;
+		}
+	#box div{
+		opacity:0.7;
+		border-radius:3px;
+		box-shadow:0px 0px 5px #ADB2FF;
+		}
+	#the1{/*前*/
+		position:absolute;
+		width:250px;
+		height:250px;
+		background-color:#504B67;
+		top:230px;
+		left:-600px;
+		-webkit-transform: rotateX(50deg) rotateY(10deg) translateZ(100px);/*0,0,100*/
+		-webkit-transition: -webkit-transform 2s;
+		-moz-transform: rotateX(50deg) rotateY(10deg) translateZ(100px);/*0,0,100*/
+		-moz-transition: -moz-transform 2s;
+		}
+	#the2{/*左*/
+	position:absolute;
+		width:200px;
+		height:200px;
+		background-color:#22F;
+		top:50px;
+		left:-450px;
+		-webkit-transform:rotateX(40deg) rotateY(60deg) translateZ(100px);/*90,0,100*/
+		-webkit-transition: -webkit-transform 2s;
+		-moz-transform:rotateX(40deg) rotateY(60deg) translateZ(100px);/*90,0,100*/
+		-moz-transition: -moz-transform 2s;
+		}
+	#the3{/*右*/
+	position:absolute;
+		width:80px;
+		height:80px;
+		background-color:#c4F;
+		top:-20px;
+		left:-300px;
+		-webkit-transform:rotateX(170deg) rotateY(50deg) translateZ(100px);/*270,0,100*/
+		-webkit-transition: -webkit-transform 2s;
+		-webkit-transform:rotateX(170deg) rotateY(50deg) translateZ(100px);/*270,0,100*/
+		-moz-transition: -moz-transform 2s;
+		}
+	#the4{/*上*/
+	position:absolute;
+		width:50px;
+		height:50px;
+		background-color:#15F;
+		top:-150px;
+		left:-200px;
+		-webkit-transform:rotateX(30deg) rotateY(30deg) translateZ(100px);/*0,90,100*/
+		-webkit-transition: -webkit-transform 2s;
+		-moz-transform:rotateX(30deg) rotateY(30deg) translateZ(100px);/*0,90,100*/
+		-moz-transition: -moz-transform 2s;
+		}
+	#the5{/*下*/
+	position:absolute;
+		width:100px;
+		height:100px;
+		background-color:#7467E3;
+		top:-180px;
+		left:-200px;
+		-webkit-transform:rotateX(0deg) rotateY(270deg) translateZ(100px);	/*0,270,100*/
+		-webkit-transition: -webkit-transform 2s;
+		-moz-transform:rotateX(0deg) rotateY(270deg) translateZ(100px);	/*0,270,100*/
+		-moz-transition: -moz-transform 2s;
+		}
+	#the6{/*后*/
+	position:absolute;
+		width:100px;
+		height:100px;
+		background-color:#04F;
+		top:-100px;
+		left:-210px;
+		-webkit-transform:rotateX(0deg) rotateY(40deg) translateZ(-100px);/*0,0,-100 */
+		-webkit-transition: -webkit-transform 2s;
+		-moz-transform:rotateX(0deg) rotateY(40deg) translateZ(-100px);/*0,0,-100 */
+		-moz-transition: -moz-transform 2s;
+		}
+	.xhclass{
+		position:absolute;
+		width:200px;
+		height:25px;
+		left:50%;
+		line-height:25px;
+		margin-left:50px;
+		top:500px;
+		display:none;
+		color:#FFF;
+		}
+	.xhclass2{
+		position:absolute;
+		width:200px;
+		height:25px;
+		left:50%;
+		line-height:25px;
+		margin-left:100px;
+		top:500px;
+		display:none;
+		color:#FFF;
+		}
+	#father{
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		background-image:url(../img/welcomeback.jpg);
+		overflow:hidden;
+		}
+	#xh_button{
+	display:block;
+		color:#FFF;
+		width:150px;
+		height:40px;
+		line-height:40px;
+		border:solid 1px #ccc;
+		background-image:url(../img/write0.png);
+		background-color:transparent;
+		border-radius:10px;
+		cursor:pointer;
+		}
+	.xhzc{
+		position:absolute;
+		width:30px;
+		height:30px;
+		font-size:24px;
+		line-height:30px;
+		display:none;
+		color:#FFF;
+		text-shadow:0px 0px 5px #FFB976;
+		top:0px;
+		}
+	#xhz1{
+		left:0px;
+		}
+	#xhz2{
+		left:30px;
+		}
+	#xhz3{
+		left:60px;
+		}
+	#xhz4{
+		left:90px;
+		}
+	#xhz5{
+		left:120px;
+		}
+	#xhz6{
+		left:150px;
+		}
+	#xhz7{
+		left:180px;
+		}
+	#xhz8{
+		left:210px;
+		}
+	#xh_button:hover{
+		color:#000;
+		balckground-image:url('../img/write.png');
+		}
+	@-webkit-keyframes run{
+	   from{-webkit-transform:rotateY(360deg)}
+	   to{-webkit-transform:rotateY(0deg)}
+	}
+	@-moz-keyframes run{
+	   from{-moz-transform:rotateY(360deg)}
+	   to{-moz-transform:rotateY(0deg)}
+	}

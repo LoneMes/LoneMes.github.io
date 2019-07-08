@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="GhostBlade" />
+    <meta name="keywords" content="GhostBlade" />
+    <link rel="stylesheet" href="public/scrollbar/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="public/css.css" />
+    <title>Ghost Blade</title>
+  </head>
+  <body>
+    <div id="loading" class="loading">
+      <div class="loadingdiv all_trans">
+        <img src="img/loading.jpg" alt="loading" />
+        <div class="loadingpie"><span id="loadingspan">0</span>%</div>
+      </div>
+      <div class="founddiv all_trans">
+        <div id="foundbtn1" class="all_trans3"><span>开启音乐</span></div>
+        <div id="foundbtn2" class="all_trans3"><span>静音</span></div>
+      </div>
+    </div>
+    <div id="boss" class="boss">
+      <!-- 主页 -->
+      <div class="page1">
+        <canvas id="canvas1" class="canvas1"></canvas>
+        <div class="logobox">
+          <div class="logo">
+            <img id="logo_d1" class="logo_d1 d3_son" src="img/logo_d1.png" />
+            <img id="logo_d2" class="logo_d2 d3_son" src="img/logo_d2.png" />
+            <img id="logo_word" class="logo_word d3_son" src="img/logo_word.png" />
+          </div>
+          <div id="logow1" class="info info1">my sword is here</div>
+          <div id="logow2" class="info">and I swear never betray</div>
+        </div>
+      </div>
+      <!-- 底部 包括菜单 -->
+      <div class="footer all_b">
+        <div id="menu" class="menu">
+          <div id="menubtn" class="menubtn all_trans"><span>M</span>enu</div>
+          <div id="menubox" class="menubox all_trans">
+            <div class="decorate">
+              <div></div>
+            </div>
+            <div class="bottom_line1"></div>
+            <div class="bottom_line2"></div>
+            <ul class="menuul">
+              <li class="all_b all_trans" data-id="a">故事起源<span>story</span></li>
+              <li class="all_b all_trans" data-id="b">主要人物<span>principal roles</span></li>
+              <li class="all_b all_trans" data-id="c">画师介绍<span>painter</span></li>
+            </ul>
+            <div class="ulline"></div>
+            <div class="music">
+              <div class="title all_b">music</div>
+              <ul class="bgmul">
+                <li class="all_b all_trans mp3 play" data-mp3="1">Victory <span>- Two steps from hell</span></li>
+                <li class="line"></li>
+                <li class="all_b all_trans mp3" data-mp3="2">Star Sky <span>- Two steps from hell</span></li>
+              </ul>
+              <audio id="audio1" src="https://isluo.com/work/gd/file/1.mp3" controls preload></audio>
+            </div>
+          </div>
+        </div>
+        <div id="close" class="close">
+          <div id="closeicon" class="closeicon all_trans"></div>
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </div>
+        <span>copyright © 2017 Logic all rights reserved</span>
+      </div>
+      <!-- 详细内容modal -->
+      <div id="modal" class="modal">
+        <div id="box" class="modalbox"></div>
+        <div id="modalloading" class="modalloading">
+          <img src="img/loading.gif" />
+        </div>
+      </div>
+    </div>
+    <script src="public/jquery-3.1.1.min.js"></script>
+    <script src="public/fastclick.js"></script>
+    <script src="public/scrollbar/js/minified/jquery.mCustomScrollbar.min.js"></script>
+    <script src="public/js.js"></script>
+  </body>
+</html>

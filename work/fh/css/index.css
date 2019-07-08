@@ -1,0 +1,421 @@
+#centerbody{	
+	position:absolute;
+	width:450px;
+	height:450px;
+	left:50%;
+	top:50%;
+	margin-left:-225px;
+	margin-top:-225px;
+	perspective:600px;
+	-webkit-perspective:600px;
+	-moz-perspective:600px;
+	
+	}
+#boss{
+	position:absolute;
+	display:none;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	}
+#centerbody_temp{
+	position:absolute;
+	width:100%;
+	height:100%;
+	}
+#navig{			
+	position:absolute;
+	width:100%;
+	height:50px;
+	bottom:75px;
+	}
+#login{			
+	position:absolute;
+	border-radius:5px;
+	box-shadow:0px 0px 10px #F96;
+	display:none;
+	width:300px;
+	height:200px;
+	left:50%;
+	top:50%;
+	margin-left:-150px;
+	margin-top:-100px;
+	background-image:url(../img/brown90.png);
+	}
+#navig_hotel{	
+	position:absolute;
+	display:none;
+	width:100%;
+	height:50px;
+	bottom:75px;
+	}
+#theaddr{		
+	position:absolute;
+	width:300px;
+	height:150px;
+	background-image:url(../img/addrimg.png);
+	}
+#theaddrzi{		
+	position:absolute;
+	display:none;
+	width:300px;
+	height:200px;
+	left:210px;
+	}	
+#addr{			
+	position:absolute;
+	display:none;
+	width:605px;
+	height:200px;
+	left:50%;
+	margin-left:-300px;
+	top:50%;
+	margin-top:-200px;
+	}
+#cur4_center{	
+	position:absolute;
+	width:100%;
+	height:0px;
+	top:45%;
+	margin-top:0px;
+	left:0px;
+	overflow:hidden;
+	}
+#level1{		
+	position:absolute;
+	width:2000px;
+	height:900px;
+	left:50%;
+	margin-left:-1000px;
+	top:-300px;
+	background-image:url(../img/bg1.png);
+	}
+#level2{		
+	position:absolute;
+	width:3000px;
+	height:900px;
+	left:50%;
+	margin-left:-1500px;
+	top:-300px;
+	background-image:url(../img/bg2.png);
+	}
+#level3{		
+	position:absolute;
+	width:3000px;
+	height:900px;
+	left:50%;
+	margin-left:-1500px;
+	top:-300px;
+	background-image:url(../img/bg3.png);
+	}
+#level4{		
+	position:absolute;
+	width:2000px;
+	height:900px;
+	left:50%;
+	margin-left:-1000px;
+	top:-300px;
+	}
+#level4_1{		
+	top:60px;
+	left:0px;
+	background-image:url(../img/people1.jpg);
+	}
+#level4_2{		
+	top:60px;
+	left:1600px;
+	background-image:url(../img/people2.jpg);
+	}
+#level4_3{		
+	top:360px;
+	left:800px;
+	background-image:url(../img/people3.jpg);
+	}
+#level4_4{		
+	top:660px;
+	left:0px;
+	background-image:url(../img/people4.jpg);
+	}
+#level4_5{		
+	top:660px;
+	left:1600px;
+	background-image:url(../img/people5.jpg);
+	}
+#cur4_peoples{	
+	position:absolute;
+	width:425px;
+	height:30px;
+	top:45%;
+	left:50%;
+	margin-left:-212px;
+	margin-top:155px;
+	}
+#navig_embed1{	
+	position:absolute;
+	left:100px;
+	top:5px;
+	width:150px;
+	height:32px;
+	}
+#navig_embed2{	
+	position:absolute;
+	left:255px;
+	top:5px;
+	width:150px;
+	height:32px;
+	}
+#qiu1{
+	position:absolute;
+	width:30px;
+	height:30px;
+	left:200px;
+	top:500px;
+	}
+#qiu2{
+	position:absolute;
+	width:30px;
+	height:30px;
+	left:800px;
+	top:200px;
+	}
+#qiu3{
+	position:absolute;
+	width:25px;
+	height:25px;
+	left:150px;
+	top:150px;
+	}
+#qiu4{
+	position:absolute;
+	width:15px;
+	height:15px;
+	left:700px;
+	top:400px;
+	}
+#qiu5{
+	position:absolute;
+	width:15px;
+	height:15px;
+	left:750px;
+	top:200px;
+	}
+#qiu6{
+	position:absolute;
+	width:15px;
+	height:15px;
+	left:300px;
+	top:200px;
+	}
+#qiu7{
+	position:absolute;
+	width:5px;
+	height:5px;
+	left:550px;
+	top:140px;
+	}
+#qiu8{
+	position:absolute;
+	width:5px;
+	height:5px;
+	left:650px;
+	top:350px;
+	}
+#qiu9{
+	position:absolute;
+	width:5px;
+	height:5px;
+	left:500px;
+	top:300px;
+	}
+#qiu10{
+	position:absolute;
+	width:5px;
+	height:5px;
+	left:400px;
+	top:400px;
+	}
+#qiul1{
+	position:absolute;
+	width:800px;
+	height:500px;
+	left:50%;
+	margin-left:-400px;
+	top:40%;
+	margin-top:-250px;
+	}
+#qiul2{
+	position:absolute;
+	width:800px;
+	height:500px;
+	left:40%;
+	margin-left:-400px;
+	top:50%;
+	margin-top:-250px;
+	}
+#qiul3{
+	position:absolute;
+	width:800px;
+	height:500px;
+	left:40%;
+	margin-left:-400px;
+	top:50%;
+	margin-top:-250px;
+	}
+#curtain2_img{	
+	position:absolute;
+	width:600px;
+	height:300px;
+	left:50%;
+	margin-left:-250px;
+	top:40%;
+	margin-top:-150px;
+	}
+#curtain2_roll{	
+	position:absolute;
+	width:100px;
+	height:0px;
+	right:0px;
+	top:150px;
+	background-image:url(../img/black10.png);
+	overflow:hidden;
+	}
+#curtain2_content{	
+	position:absolute;
+	width:500px;
+	height:300px;
+	left:0px;
+	overflow:hidden;
+	}
+#curtain2_up{
+	position:absolute;
+	width:100px;
+	height:50px;
+	right:0px;
+	top:0px;
+	cursor:pointer;
+	background-image:url(../img/up.png);
+	}
+#curtain2_down{
+	position:absolute;
+	width:100px;
+	height:50px;
+	right:0px;
+	bottom:0px;
+	cursor:pointer;
+	background-image:url(../img/down.png);
+	}
+#roll_high{
+	position:absolute;
+	width:100px;
+	height:500px;
+	top:100px;
+	}
+#curtain2_explain{	
+	position:absolute;
+	width:0px;
+	height:30px;
+	bottom:5px;
+	left:150px;
+	background:url(../img/curimgline.png) center;
+	}
+#curtain2_explain_img{
+	position:absolute;
+	width:200px;
+	height:30px;
+	display:none;
+	text-align:center;
+	line-height:28px;
+	}
+/* CLASS */
+
+.cb{			
+	margin:5px;
+	width:140px;
+	height:140px;
+	float:left;
+	-webkit-transform-style: preserve-3d;
+	}
+.cbb{			
+	background-image:url(../img/writeback.png);
+	box-shadow:0px 0px 5px #FFF;
+	}
+.cbb2{			
+	background-image:url(../img/writeback2.png);
+	line-height:140px;
+	text-align:center;
+	cursor:pointer;
+	}
+.hotel_button{	
+	width:150px;
+	height:25px;
+	margin:5px 5px 0px 0px;
+	float:left;
+	}
+.level4_div{	
+	position:absolute;
+	width:400px;
+	height:180px;
+	background-color:#966;
+	}
+.thepeoples{	
+	width:80px;
+	height:30px;
+	margin-right:5px;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	cursor:pointer;
+	background-image:url(../img/peopleback.png);
+	}
+.roll_high_div{
+	width:100px;
+	height:100px;
+	font-size:0px;
+	cursor:pointer;
+	}
+.qiureal{
+	width:100%;
+	height:100%;
+	}
+.loginbutton{
+	width:55px;
+	height:23px;
+	font-size:12px;
+	border-radius:3px;
+	background-color:#EEE;
+	border:solid 1px #CCCCCC;
+	cursor:pointer;
+	}
+.loginbutton{
+	background-color:#FFF;
+}
+#musicimg{
+	position:absolute;
+	right:10px;
+	top:10px;
+	cursor:pointer;
+	}
+/* hover */
+
+.cbb2:hover{	
+	background-image:url(../img/writeback.png);
+	box-shadow:0px 0px 5px #FFF;
+	}
+#curtain2_up:hover{
+	background-image:url(../img/up2.png);
+	}
+#curtain2_down:hover{
+	background-image:url(../img/down2.png);
+	}
+.thepeoples:hover{
+	background-image:url(../img/peopleback2.png);
+	}
+.index_a{
+	display:block;
+width:140px;
+height:140px;
+text-decoration: none;
+color:#FFF;
+}

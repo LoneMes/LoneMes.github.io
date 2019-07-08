@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+	<title>玫瑰花的葬礼</title>
+	<link rel="stylesheet" href="public/css/css.min.css" />
+	<script src="./public/js/fastclick.js"></script>
+	</head>
+	<body style="background-color:#ccc">
+		<div id="loadingbox" class="loadingbox">
+			<div id="loading" class="loading">
+				<div>&#12288;真的好美丽&nbsp;&nbsp;<span>·</span>&nbsp;&nbsp;那天的烟花雨</div>
+				<div id="percent" class="percent">0%</div>
+			</div>
+			<div id="mobileIn" class="mobile-in">有音乐，确定进入</div>
+			<div id="noway" class="noway">您的浏览器不支持WebGL,请使用现代先进浏览器</div>
+		</div>
+		<div class="boss">
+			<div id="audiobtn" class="audiobtn all_trans600">
+				<div></div>
+				<img class="open show" src="./public/img/sound_open.png" />
+				<img class="close" src="./public/img/sound_close.png" />
+			</div>
+			<div id="logo" class="logo">
+				<div class="line1 all_trans600"></div>
+				<div class="line2 all_trans600"></div>
+				<div class="word all_trans600">玫瑰花的葬礼</div>
+				<div class='logo3d'>
+					<img id="rose" src="public/img/logo.png" />
+				</div>
+			</div>
+			<ul id="menu" class="menu">
+				<li>
+					<div id="page1" class="title all_trans600">首页</div>
+					<div class="line all_trans"></div>
+				</li>
+				<li>
+					<div id="page2" class="title all_trans600">故事</div>
+					<div class="line all_trans"></div>
+				</li>
+				<li>
+					<div id="page3" class="title all_trans600">结局</div>
+					<div class="line all_trans"></div>
+				</li>
+			</ul>
+			<div id="pagebox2" class="pagebox2 pagebox  all_trans">
+				<div class="box2">
+					<p>结局？</p>
+					<p>小王子没有回到他的星球</p>
+					<p>错过了就是错过了</p>
+				</div>
+			</div>
+			<div id="pagebox1" class="pagebox1 pagebox all_trans">
+				<div id="iscroller" class="box box1">
+					<div class="all_clear">
+						<img src="./public/img/rose3.png" class="all_fr"/>
+						<p>"我本可以忍受黑暗，如果我不曾见过太阳"</p>
+						<br/>
+						<p>小王子来自一颗遥远的星球</p>
+						<p>他曾爱慕着他星球上的一朵玫瑰。</p>
+						<p>但由于自己的愚蠢他最终选择了离开。</p>
+						<br/>
+						<p>直到有一天他路过玫瑰园遇到狐狸，才知道世界上原来有那么多的玫瑰。</p>
+						<p>狐狸对他说：</p>
+						<p>“我的生活很单调。我捕捉猎物，而人类又捕捉我。所有的猎物全都一样，所有的 人也全都一样。因此，我感到有些厌烦了。</p>
+						<p>但是，如果你要是驯服了我，我的生 活就一定会是欢快的。我会辨认出一种与众不同的脚步声。其他的脚步声会使我 躲到地下去，而你的脚步声就会象音乐一样让我从洞里走出来。</p>
+						<img src="./public/img/rose4.png" class="all_fl"/>
+						<p>再说，你看到那边的麦田没有？我不吃面包，麦子对我来说，一点用也没有。我对麦田无 动于衷。而这，真使人扫兴。</p>
+						<p>但是，你有着金黄色的头发。那么，一旦你驯服了我，这就会十分美妙。麦子，是金黄色的，它就会使我想起你。而且，我甚至会喜欢那风吹麦浪的声音……</p>
+						<p>再去看看那些玫瑰花吧。你一定会明白，你的那朵是世界上独一无二的玫瑰。”</p>
+						<br/>
+						<p>小王子没有说话。</p>
+						<p>他知道自己已经无法回去了。望着漫天的星星，他已经不记得哪一颗是自己的星球了。</p>
+						<div class="zw40"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id='canvasbox' class="canvasbox"></div>
+		<audio id="audio" src="./public/mp3/back.mp3" loop preload="auto"></audio>
+		<script src="./public/js/jquery-3.2.1.min.js"></script>
+		<script src="./public/js/Detector.js"></script>
+		<script src="./public/js/three.min.js"></script>
+		<script src="./public/js/tween.min.js"></script>
+		<script src="./public/js/controls/OrbitControls.js"></script>
+		<script src="./public/js/filter/BloomPass.js"></script>
+		<script src="./public/js/filter/ConvolutionShader.js"></script>
+		<script src="./public/js/filter/CopyShader.js"></script>
+		<script src="./public/js/filter/EffectComposer.js"></script>
+		<script src="./public/js/filter/MaskPass.js"></script>
+		<script src="./public/js/filter/RenderPass.js"></script>
+		<script src="./public/js/filter/ShaderPass.js"></script>
+		<!-- <script src="./public/lib/webgl-utils.js"></script>
+		<script src="./public/lib/webgl-debug.js"></script>
+		<script src="./public/lib/cuon-utils.js"></script>
+		<script src="./public/lib/cuon-matrix.js"></script> -->
+		<script src="./public/js/iscroll.js"></script>
+		<script src="./public/js/roses.min.js"></script>
+	</body>
+</html>
