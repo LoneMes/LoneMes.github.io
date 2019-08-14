@@ -12,7 +12,7 @@ const users = [
   { n: 'leo', s: 0.1 },
   { n: '~科24~', s: 0.01 },
   { n: ['libs/imgs/users/niu.png'], s: 1 },
-  { n: 'moleQ', s: 1 },
+  { n: 'moleQ', s: 1.01 },
   { n: ['西瓜丸子', 'libs/imgs/users/xigua.png'], s: 1 },
   { n: '呐-是小中', s: 0.01 },
   { n: '卡斯特梅的雨', s: 20 },
