@@ -3,10 +3,10 @@
   "short_name": "React",
   "description": "ReactPWA Demo",
   "dir": "auto",
-  "lang": "zh-CN",
+  "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
-  "start_url": ".",
+  "start_url": "/work/pwa/",
   "background_color": "#222222",
   "theme_color": "#222222",
   "icons": [
