@@ -15,7 +15,7 @@
     <title>isluo</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="kernel/index/css/welcome.min.css" />
-    <link rel="prefetch" href="/home" />
+    <link rel="prefetch" href="/home.html" />
     <style>
       .blur {
         transition: box-shadow 0.8s, transform 1s, width 1s, height 1s, opacity 0.3s;
@@ -136,64 +136,64 @@
       <div id="l_5" class="l_5 transtionOpacity">oading<span id="l_6" class="l_6">...</span></div>
     </div>
     <script type="text/javascript">
-      document.getElementById('l_4').addEventListener('webkitTransitionEnd', loading_2, false);
-      document.getElementById('l_4').addEventListener('transitionend', loading_2, false);
+      document.getElementById("l_4").addEventListener("webkitTransitionEnd", loading_2, false);
+      document.getElementById("l_4").addEventListener("transitionend", loading_2, false);
       function loadin() {
-        var l1s = document.getElementById('l_1').style;
-        l1s['-webkit-transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-        l1s['transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-        l1s['height'] = '20px';
-        l1s['opacity'] = '1';
-        l1s.boxShadow = '0 0 0 1px #FFFFFF';
+        var l1s = document.getElementById("l_1").style;
+        l1s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+        l1s["transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+        l1s["height"] = "20px";
+        l1s["opacity"] = "1";
+        l1s.boxShadow = "0 0 0 1px #FFFFFF";
         loadtimer1 = setTimeout(function() {
-          var l2s = document.getElementById('l_2').style;
-          l2s['-webkit-transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-          l2s['transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-          l2s['height'] = '19px';
-          l2s['opacity'] = '1';
-          l2s.boxShadow = '0 0 0 1px #FFFFFF';
+          var l2s = document.getElementById("l_2").style;
+          l2s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+          l2s["transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+          l2s["height"] = "19px";
+          l2s["opacity"] = "1";
+          l2s.boxShadow = "0 0 0 1px #FFFFFF";
         }, 250);
         loadtimer2 = setTimeout(function() {
-          var l3s = document.getElementById('l_3').style;
-          l3s['-webkit-transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-          l3s['transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-          l3s['width'] = '12px';
-          l3s['opacity'] = '1';
-          l3s.boxShadow = '0 0 0 1px #FFFFFF';
+          var l3s = document.getElementById("l_3").style;
+          l3s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+          l3s["transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+          l3s["width"] = "12px";
+          l3s["opacity"] = "1";
+          l3s.boxShadow = "0 0 0 1px #FFFFFF";
         }, 500);
         loadtimer3 = setTimeout(function() {
-          var l4s = document.getElementById('l_4').style;
-          l4s['-webkit-transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-          l4s['transform'] = 'rotateX(0) rotateY(0) translateZ(0)';
-          l4s['width'] = '10px';
-          l4s['opacity'] = '1';
-          l4s.boxShadow = '0 0 0 1px #FFFFFF';
+          var l4s = document.getElementById("l_4").style;
+          l4s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+          l4s["transform"] = "rotateX(0) rotateY(0) translateZ(0)";
+          l4s["width"] = "10px";
+          l4s["opacity"] = "1";
+          l4s.boxShadow = "0 0 0 1px #FFFFFF";
         }, 750);
       }
       var load_i = 0;
       function loading_2() {
         load_i++;
         if (load_i >= 4) {
-          document.getElementById('l_5').style['opacity'] = '1';
-          document.getElementById('l_6').style['-webkit-animation-play-state'] = 'running';
-          document.getElementById('l_6').style.animationPlayState = 'running';
+          document.getElementById("l_5").style["opacity"] = "1";
+          document.getElementById("l_6").style["-webkit-animation-play-state"] = "running";
+          document.getElementById("l_6").style.animationPlayState = "running";
         }
       }
       var loadtimer;
       function loadout() {
         window.clearTimeout(loadtimer);
         if (load_i < 4) {
-          loadtimer = setTimeout('loadout()', 500);
+          loadtimer = setTimeout("loadout()", 500);
           return;
         }
         setTimeout(function() {
-          document.getElementById('loadingbox').style['opacity'] = '0';
-          var obj = document.getElementById('l_6');
+          document.getElementById("loadingbox").style["opacity"] = "0";
+          var obj = document.getElementById("l_6");
           obj.parentNode.removeChild(obj);
-          setTimeout('pageShow()', 300);
+          setTimeout("pageShow()", 300);
         }, 500);
       }
-      setTimeout('loadin()', 200);
+      setTimeout("loadin()", 200);
     </script>
     <div class="l_curtain"></div>
     <div id="checkrower"></div>
