@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/work/vue-puzzle-vcode/precache-manifest.4b682f118ef11adbf34a5fbd4aad9e83.js"
+  "/work/vue-puzzle-vcode/precache-manifest.35979ba56d1b56c2f682d0fc6d364a95.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-dna-demo"});
