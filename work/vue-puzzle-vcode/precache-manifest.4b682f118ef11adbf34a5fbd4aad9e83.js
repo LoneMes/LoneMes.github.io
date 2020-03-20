@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "372895dd2df3678a9d65",
+    "revision": "44ba8b750190efc850dc",
     "url": "/work/vue-puzzle-vcode/css/app.1df78cb1.css"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/work/vue-puzzle-vcode/css/chunk-vendors.98d10ae1.css"
   },
   {
-    "revision": "4425a6c93d4ada231db7c7a121154253",
+    "revision": "75a734d2158bbee5558abd3dd47b280f",
     "url": "/work/vue-puzzle-vcode/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/work/vue-puzzle-vcode/js/about.0e164b72.js"
   },
   {
-    "revision": "372895dd2df3678a9d65",
-    "url": "/work/vue-puzzle-vcode/js/app.23ccf25e.js"
+    "revision": "44ba8b750190efc850dc",
+    "url": "/work/vue-puzzle-vcode/js/app.c0338eda.js"
   },
   {
     "revision": "a4b3f9acf6ef148de0c0",
