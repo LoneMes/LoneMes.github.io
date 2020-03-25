@@ -1,24 +1,25 @@
 /** 页面逻辑相关参数 **/
 const users = [
-  { n: 'Logic', s: 10 },
-  { n: '士大夫', s: 5 },
-  { n: '枳语', s: 2 },
-  { n: '温度℃', s: 1 },
-  { n: 'Hodor', s: 10.24 },
-  { n: '企鹅丫丫AVON', s: 1 },
-  { n: '愚蠢的土拔鼠', s: 1 },
-  { n: '天将明', s: 5 },
-  { n: '王宇晗', s: 1 },
-  { n: 'leo', s: 0.1 },
-  { n: '~科24~', s: 0.01 },
-  { n: ['libs/imgs/users/niu.png'], s: 1 },
-  { n: 'moleQ', s: 1.01 },
-  { n: ['西瓜丸子', 'libs/imgs/users/xigua.png'], s: 1 },
-  { n: '呐-是小中', s: 0.01 },
-  { n: '卡斯特梅的雨', s: 20 },
-  { n: '氕氘氚', s: 1 },
-  { n: '真羽', s: 1 },
-  { n: 'veer', s: 0.01 },
+  { n: "Logic", s: 10 },
+  { n: "士大夫", s: 5 },
+  { n: "枳语", s: 2 },
+  { n: "温度℃", s: 1 },
+  { n: "Hodor", s: 10.24 },
+  { n: "企鹅丫丫AVON", s: 1 },
+  { n: "愚蠢的土拔鼠", s: 1 },
+  { n: "天将明", s: 5 },
+  { n: "王宇晗", s: 1 },
+  { n: "leo", s: 0.1 },
+  { n: "~科24~", s: 0.01 },
+  { n: ["libs/imgs/users/niu.png"], s: 1 },
+  { n: "moleQ", s: 1.01 },
+  { n: ["西瓜丸子", "libs/imgs/users/xigua.png"], s: 1 },
+  { n: "呐-是小中", s: 0.01 },
+  { n: "卡斯特梅的雨", s: 20 },
+  { n: "氕氘氚", s: 1 },
+  { n: "真羽", s: 1 },
+  { n: "veer", s: 0.01 },
+  { n: "浮生六记", s: 1 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
@@ -27,7 +28,7 @@ let animeObj = {
   shipSpeed: 100, // 当前飞船速度，加载百分比
   star_speed: -0.15, // 星空速度
 };
-const speedDom = document.getElementById('speed'); // 显示速度的DOM，多次要用
+const speedDom = document.getElementById("speed"); // 显示速度的DOM，多次要用
 let musicPlaying = false; // 音乐是否正在播放中
 let musicNum = 0; // 当前播放的哪一首歌曲
 
@@ -86,12 +87,12 @@ function init3boss() {
   camera.lookAt(new THREE.Vector3(0, 0, 0));
   renderer.setSize(window.innerWidth, window.innerHeight, true);
   renderer.setClearColor(0x000000);
-  document.getElementById('canvas-box').appendChild(renderer.domElement);
+  document.getElementById("canvas-box").appendChild(renderer.domElement);
 }
 
 /** 初始化镜头控制器 **/
 function initCameraControl() {
-  cameraControls = new THREE.OrbitControls(camera, document.getElementById('canvas-box'));
+  cameraControls = new THREE.OrbitControls(camera, document.getElementById("canvas-box"));
   cameraControls.target.set(0, 0, 0);
   cameraControls.maxDistance = 100;
   cameraControls.minDistance = 40;
@@ -188,15 +189,15 @@ function createCone(position) {
 
 /** 慢速星空 - 创建star纹理 **/
 function makeStarTexture() {
-  const canvas = document.createElement('canvas');
+  const canvas = document.createElement("canvas");
   canvas.width = 16;
   canvas.height = 16;
-  const pen = canvas.getContext('2d');
+  const pen = canvas.getContext("2d");
   const gradient = pen.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
-  gradient.addColorStop(0, 'rgba(255,255,255,1)');
-  gradient.addColorStop(0.2, 'rgba(0,255,255,1)');
-  gradient.addColorStop(0.4, 'rgba(0,0,164,1)');
-  gradient.addColorStop(1, 'rgba(0,0,0,1)');
+  gradient.addColorStop(0, "rgba(255,255,255,1)");
+  gradient.addColorStop(0.2, "rgba(0,255,255,1)");
+  gradient.addColorStop(0.4, "rgba(0,0,164,1)");
+  gradient.addColorStop(1, "rgba(0,0,0,1)");
   pen.fillStyle = gradient; //将笔触填充色设置为这个渐变放射状
   pen.fillRect(0, 0, canvas.width, canvas.height); //画矩形
   const texture = new THREE.Texture(canvas); //生成贴图对象（参数是图片或canvas画布）
@@ -248,13 +249,13 @@ function initStarSky() {
     points.push(x, y, z, x + lang, y, z);
   }
 
-  geometry.addAttribute('position', new THREE.Float32BufferAttribute(points, 3)); // 设置顶点们
+  geometry.addAttribute("position", new THREE.Float32BufferAttribute(points, 3)); // 设置顶点们
 
   const material2 = new THREE.LineBasicMaterial({
     color: 0x638daf,
     linewidth: 1,
-    linecap: 'square',
-    linejoin: 'bevel',
+    linecap: "square",
+    linejoin: "bevel",
   });
   lineMesh = new THREE.LineSegments(geometry, material2);
   lineMesh2 = lineMesh.clone();
@@ -296,9 +297,9 @@ function initTunne() {
 
 /** 创建天空盒 **/
 function initSkyBox() {
-  const shader = THREE.ShaderLib['cube'];
-  shader.uniforms['tCube'].value = skybox_texture;
-  shader.uniforms['opacity'] = { value: 1 };
+  const shader = THREE.ShaderLib["cube"];
+  shader.uniforms["tCube"].value = skybox_texture;
+  shader.uniforms["opacity"] = { value: 1 };
   const material = new THREE.ShaderMaterial({
     fragmentShader: shader.fragmentShader,
     vertexShader: shader.vertexShader,
@@ -428,9 +429,9 @@ function initAppendage() {
 /** 初始化2D铭牌 **/
 function init2dLabel() {
   // 顶部标签
-  const label1Div = document.createElement('div');
-  label1Div.className = 'title2d';
-  label1Div.id = 'title2d';
+  const label1Div = document.createElement("div");
+  label1Div.className = "title2d";
+  label1Div.id = "title2d";
   label1Div.innerHTML = '<div class="t pointernone">Waterdrop</div><div class="l1"></div><div class="l2"></div>';
 
   const label1 = new THREE.CSS2DObject(label1Div);
@@ -438,10 +439,11 @@ function init2dLabel() {
   water_mesh.add(label1);
 
   // 后部标签
-  const label2Div = document.createElement('div');
-  label2Div.className = 'label2';
-  label2Div.id = 'label2';
-  label2Div.innerHTML = '<p class="pointernone">这是2.0版本的"水滴"</p><p>配置了<i>曲率驱动引擎</i>及强互作用力外壳</p><p>由半人马星座α星系朝着太阳系行进</p><p>约<i>4个地球年</i>后抵达</p><p>哈勃望远镜已能捕获其图像</p>';
+  const label2Div = document.createElement("div");
+  label2Div.className = "label2";
+  label2Div.id = "label2";
+  label2Div.innerHTML =
+    '<p class="pointernone">这是2.0版本的"水滴"</p><p>配置了<i>曲率驱动引擎</i>及强互作用力外壳</p><p>由半人马星座α星系朝着太阳系行进</p><p>约<i>4个地球年</i>后抵达</p><p>哈勃望远镜已能捕获其图像</p>';
   const label2 = new THREE.CSS2DObject(label2Div);
   label2.position.set(10, 50, 0);
   water_mesh.add(label2);
@@ -452,9 +454,9 @@ function initComposer() {
   /** 铭牌渲染器 **/
   labelRenderer = new THREE.CSS2DRenderer();
   labelRenderer.setSize(window.innerWidth, window.innerHeight);
-  labelRenderer.domElement.style.position = 'absolute';
+  labelRenderer.domElement.style.position = "absolute";
   labelRenderer.domElement.style.top = 0;
-  document.getElementById('canvas-box').appendChild(labelRenderer.domElement);
+  document.getElementById("canvas-box").appendChild(labelRenderer.domElement);
 
   /** 后处理 - 后期渲染器 **/
   composer = new THREE.EffectComposer(renderer);
@@ -471,7 +473,7 @@ function initComposer() {
 
   /** 后处理 - 抗锯齿 **/
   effectFXAA = new THREE.ShaderPass(THREE.FXAAShader);
-  effectFXAA.uniforms['resolution'].value.set(1 / window.innerWidth, 1 / window.innerHeight);
+  effectFXAA.uniforms["resolution"].value.set(1 / window.innerWidth, 1 / window.innerHeight);
   effectFXAA.renderToScreen = true;
   composer.addPass(effectFXAA);
 
@@ -506,39 +508,46 @@ function initAllTexturesAndImgs() {
   const loader = new THREE.TextureLoader();
   const cubeLoader = new THREE.CubeTextureLoader();
   loader.load(
-    './libs/imgs/lightray_red.jpg',
+    "./libs/imgs/lightray_red.jpg",
     function(texture) {
       cone_texture = texture;
       checkLoading();
     },
     null,
     function(err) {
-      console.log('光锥纹理加载失败', err);
-    },
+      console.log("光锥纹理加载失败", err);
+    }
   );
 
   loader.load(
-    './libs/imgs/001_electric.jpg',
+    "./libs/imgs/001_electric.jpg",
     function(texture) {
       tunnel_texture = texture;
       checkLoading();
     },
     null,
     function(err) {
-      console.log('时空隧道纹理加载失败', err);
-    },
+      console.log("时空隧道纹理加载失败", err);
+    }
   );
 
   cubeLoader.load(
-    ['libs/imgs/skybox/posx.jpg', 'libs/imgs/skybox/negx.jpg', 'libs/imgs/skybox/posy.jpg', 'libs/imgs/skybox/negy.jpg', 'libs/imgs/skybox/posz.jpg', 'libs/imgs/skybox/negz.jpg'],
+    [
+      "libs/imgs/skybox/posx.jpg",
+      "libs/imgs/skybox/negx.jpg",
+      "libs/imgs/skybox/posy.jpg",
+      "libs/imgs/skybox/negy.jpg",
+      "libs/imgs/skybox/posz.jpg",
+      "libs/imgs/skybox/negz.jpg",
+    ],
     function(texture) {
       skybox_texture = texture;
       checkLoading();
     },
     null,
     function(err) {
-      console.log('天空盒纹理加载失败', err);
-    },
+      console.log("天空盒纹理加载失败", err);
+    }
   );
 }
 
@@ -549,7 +558,7 @@ function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   composer.setSize(window.innerWidth, window.innerHeight);
   labelRenderer.setSize(window.innerWidth, window.innerHeight);
-  effectFXAA.uniforms['resolution'].value.set(1 / window.innerWidth, 1 / window.innerHeight);
+  effectFXAA.uniforms["resolution"].value.set(1 / window.innerWidth, 1 / window.innerHeight);
 }
 
 /** animate动画相关 **/
@@ -590,7 +599,7 @@ function animate() {
       setTimeout(function() {
         showType = 5;
         glitchPass.renderToScreen = false;
-        $('#ship-type-ul').css('transform', 'translateY(-100px)');
+        $("#ship-type-ul").css("transform", "translateY(-100px)");
         speedRipple();
       }, 400);
     }
@@ -660,8 +669,8 @@ function animate_rayhover() {
   raycaster.setFromCamera(mouse, camera);
   if (raycaster.intersectObjects([water_mesh]).length) {
     // 被选中
-    title2d && !title2d.hasClass('show') && title2d.addClass('show');
-    label2d && !label2d.hasClass('show') && label2d.addClass('show');
+    title2d && !title2d.hasClass("show") && title2d.addClass("show");
+    label2d && !label2d.hasClass("show") && label2d.addClass("show");
     // 前面中圈
     if (line1_mesh.position.x < 20) {
       line1_mesh.position.x += 1;
@@ -755,8 +764,8 @@ function animate_rayhover() {
     }
   } else {
     // 未被选中
-    title2d && title2d.hasClass('show') && title2d.removeClass('show');
-    label2d && label2d.hasClass('show') && label2d.removeClass('show');
+    title2d && title2d.hasClass("show") && title2d.removeClass("show");
+    label2d && label2d.hasClass("show") && label2d.removeClass("show");
     // 前面中圈
     if (line1_mesh.position.x > 10) {
       line1_mesh.position.x -= 1;
@@ -830,33 +839,33 @@ function initNames() {
   users.sort(function(a, b) {
     return b.s - a.s;
   });
-  let str = '';
+  let str = "";
   let num = 0;
   for (let i = 0; i < users.length; i++) {
-    let n = '';
+    let n = "";
     if (users[i].n instanceof Array) {
       n = users[i].n
         .map(function(item, index) {
-          return item.indexOf('libs/') > -1 ? '<img src="' + item + '">' : item;
+          return item.indexOf("libs/") > -1 ? '<img src="' + item + '">' : item;
         })
-        .join('');
+        .join("");
     } else {
       n = users[i].n;
     }
-    str += '<li><div>' + n + '</div><div>￥' + users[i].s + '</div></li>';
+    str += "<li><div>" + n + "</div><div>￥" + users[i].s + "</div></li>";
     num += users[i].s;
   }
 
   const fixed = 2;
-  let pos = num.toString().indexOf('.'),
+  let pos = num.toString().indexOf("."),
     decimal_places = num.toString().length - pos - 1,
     _int = num * Math.pow(10, decimal_places),
     divisor_1 = Math.pow(10, decimal_places - fixed),
     divisor_2 = Math.pow(10, fixed);
   num = Math.round(_int / divisor_1) / divisor_2;
 
-  $(str).appendTo($('#names'));
-  $('#sum').text(num);
+  $(str).appendTo($("#names"));
+  $("#sum").text(num);
 }
 /** 开始初始化 **/
 function init() {
@@ -874,13 +883,13 @@ function init() {
   initWords(); // 初始化标题文字
   initNames(); // 构造赞助者名单
   // 浏览器改变事件
-  window.addEventListener('resize', onResize, false);
-  window.addEventListener('mousemove', onMouseMove, false);
+  window.addEventListener("resize", onResize, false);
+  window.addEventListener("mousemove", onMouseMove, false);
   FastClick.attach(document.body);
   labelRenderer.render(scene, camera);
 
   // 绑定音频事件
-  $('#play-btn').on('click', function() {
+  $("#play-btn").on("click", function() {
     if (musicPlaying) {
       musicPlaying = false;
       pause();
@@ -889,80 +898,80 @@ function init() {
       play();
     }
   });
-  $('#next-btn').on('click', next);
-  $('#audio').on('ended', next);
+  $("#next-btn").on("click", next);
+  $("#audio").on("ended", next);
 
   // 菜单事件
-  $('#menu-w').on('click', function(e) {
-    const $p = $('#page-w');
-    if ($p.hasClass('show')) {
+  $("#menu-w").on("click", function(e) {
+    const $p = $("#page-w");
+    if ($p.hasClass("show")) {
       // 当前页已经出现了
-      $('#pages-box, #pages-box>div, #close').removeClass('show');
+      $("#pages-box, #pages-box>div, #close").removeClass("show");
     } else {
-      $('#pages-box, #close').addClass('show');
-      $('#pages-box>div').removeClass('show');
-      $p.scrollTop(0).addClass('show');
+      $("#pages-box, #close").addClass("show");
+      $("#pages-box>div").removeClass("show");
+      $p.scrollTop(0).addClass("show");
     }
   });
-  $('#menu-m').on('click', function(e) {
-    const $p = $('#page-m');
-    if ($p.hasClass('show')) {
+  $("#menu-m").on("click", function(e) {
+    const $p = $("#page-m");
+    if ($p.hasClass("show")) {
       // 当前页已经出现了
-      $('#pages-box, #pages-box>div, #close').removeClass('show');
+      $("#pages-box, #pages-box>div, #close").removeClass("show");
     } else {
-      $('#pages-box, #close').addClass('show');
-      $('#pages-box>div').removeClass('show');
-      $p.scrollTop(0).addClass('show');
+      $("#pages-box, #close").addClass("show");
+      $("#pages-box>div").removeClass("show");
+      $p.scrollTop(0).addClass("show");
     }
   });
-  $('#menu-t').on('click', function(e) {
-    const $p = $('#page-t');
-    if ($p.hasClass('show')) {
+  $("#menu-t").on("click", function(e) {
+    const $p = $("#page-t");
+    if ($p.hasClass("show")) {
       // 当前页已经出现了
-      $('#pages-box, #pages-box>div, #close').removeClass('show');
+      $("#pages-box, #pages-box>div, #close").removeClass("show");
     } else {
-      $('#pages-box, #close').addClass('show');
-      $('#pages-box>div').removeClass('show');
-      $p.scrollTop(0).addClass('show');
+      $("#pages-box, #close").addClass("show");
+      $("#pages-box>div").removeClass("show");
+      $p.scrollTop(0).addClass("show");
     }
   });
-  $('#close').on('click', function() {
-    $('#pages-box, #pages-box>div, #close').removeClass('show');
+  $("#close").on("click", function() {
+    $("#pages-box, #pages-box>div, #close").removeClass("show");
   });
 
-  $('#pages-box').on('touchmove mousewheel DOMMouseScroll', function(e) {
+  $("#pages-box").on("touchmove mousewheel DOMMouseScroll", function(e) {
     e.stopPropagation();
   });
 
   setTimeout(function() {
-    title2d = $('#title2d');
-    label2d = $('#label2');
+    title2d = $("#title2d");
+    label2d = $("#label2");
   });
   initShow(); // 开始了
 
-  $('#ship-info-btn').addClass('show'); // s首个按钮出现
+  $("#ship-info-btn").addClass("show"); // s首个按钮出现
 }
 
 /** 逻辑开始的地方 **/
 initAllTexturesAndImgs(); // 加载所有资源
 
 function initWords() {
-  const $i = $('#title>i');
+  const $i = $("#title>i");
 
   $i.each(function(index, dom) {
-    dom.style.transitionDelay = Math.floor(Math.random() * 2500 + 500) + 'ms';
+    dom.style.transitionDelay = Math.floor(Math.random() * 2500 + 500) + "ms";
   });
 }
 
 // 初始化不同阶段的出现逻辑
 function initShow() {
-  $('#ship-info-btn').on('click', function() {
+  $("#ship-info-btn").on("click", function() {
     var shipInfoBtn = $(this);
-    if (!shipInfoBtn.hasClass('show')) {
+    if (!shipInfoBtn.hasClass("show")) {
       return;
     }
-    shipInfoBtn.removeClass('show');
-    const type = Number(shipInfoBtn.data('type'));
+    shipInfoBtn.removeClass("show");
+    const type = Number(shipInfoBtn.data("type"));
     switch (type) {
       case 1: // 第1阶段
         show1();
@@ -980,28 +989,28 @@ function initShow() {
 function show1() {
   animate();
   showType = 1;
-  $('#mask').fadeOut(5000, function() {
-    $('#menu').addClass('show');
+  $("#mask").fadeOut(5000, function() {
+    $("#menu").addClass("show");
     setTimeout(function() {
-      $('#ship-type-ul').css('transform', 'translateY(-40px)');
-      $('#ship-info-btn .btn-word').text('起航');
-      $('#ship-info-btn')
-        .data('type', 2)
-        .addClass('show');
-      $('#ship-info-box,#logo').css('z-index', '10');
-      $('#menu li').css('transition', 'all 200ms !important');
+      $("#ship-type-ul").css("transform", "translateY(-40px)");
+      $("#ship-info-btn .btn-word").text("起航");
+      $("#ship-info-btn")
+        .data("type", 2)
+        .addClass("show");
+      $("#ship-info-box,#logo").css("z-index", "10");
+      $("#menu li").css("transition", "all 200ms !important");
     }, 2000);
   });
-  $('#title-box, #logo').addClass('show');
-  $('#ship-type-ul').css('transform', 'translateY(-20px)');
-  $('#speed-unit').text('km/h');
+  $("#title-box, #logo").addClass("show");
+  $("#ship-type-ul").css("transform", "translateY(-20px)");
+  $("#speed-unit").text("km/h");
 
   play();
 }
 
 // 常规推进
 function show2() {
-  $('#title-box').removeClass('show');
+  $("#title-box").removeClass("show");
   showType = 2;
   const tween = new TWEEN.Tween({
     x: camera.position.x,
@@ -1012,7 +1021,7 @@ function show2() {
         x: -50,
         z: -18,
       },
-      4000,
+      4000
     )
     .easing(TWEEN.Easing.Quadratic.InOut)
     .onUpdate(function() {
@@ -1021,20 +1030,20 @@ function show2() {
       camera.lookAt(new THREE.Vector3(0, 0, 0));
     })
     .onComplete(function() {
-      $('#control-remind').addClass('show');
-      $('#ship-info-box').addClass('pointernone');
+      $("#control-remind").addClass("show");
+      $("#ship-info-box").addClass("pointernone");
       cameraControls.enabled = true;
       showType = 2.5; // 表示第2阶段已完毕
       setTimeout(function() {
-        $('#control-remind').removeClass('show');
+        $("#control-remind").removeClass("show");
       }, 5000);
       setTimeout(function() {
-        $('#ship-info-box').removeClass('pointernone');
-        $('#ship-type-ul').css('transform', 'translateY(-80px)');
-        $('#ship-info-btn .btn-word').text('开始星际穿梭');
-        $('#ship-info-btn')
-          .data('type', 3)
-          .addClass('show');
+        $("#ship-info-box").removeClass("pointernone");
+        $("#ship-type-ul").css("transform", "translateY(-80px)");
+        $("#ship-info-btn .btn-word").text("开始星际穿梭");
+        $("#ship-info-btn")
+          .data("type", 3)
+          .addClass("show");
       }, 10000);
     });
   tween.start();
@@ -1042,14 +1051,14 @@ function show2() {
     targets: animeObj,
     shipSpeed: 10000,
     round: 1,
-    easing: 'linear',
+    easing: "linear",
     duration: 4000,
     update: function() {
       speedDom.innerText = animeObj.shipSpeed.toFixed(2);
     },
   });
   setTimeout(function() {
-    $('#ship-type-ul').css('transform', 'translateY(-60px)');
+    $("#ship-type-ul").css("transform", "translateY(-60px)");
   }, 4000);
 }
 
@@ -1057,14 +1066,14 @@ function show2() {
 function show3() {
   showType = 3;
   tunnel.visible = true;
-  $('#ship-info-box').addClass('pointernone');
+  $("#ship-info-box").addClass("pointernone");
   // skybox.material.transparent = true;
   // composer.addPass( outlinePass );
   anime({
     targets: animeObj,
     shipSpeed: [{ value: 1079252848, duration: 12000 }], // 1079252848.8
     round: 1,
-    easing: 'linear',
+    easing: "linear",
     update: function() {
       speedDom.innerText = animeObj.shipSpeed.toFixed(2);
     },
@@ -1072,30 +1081,33 @@ function show3() {
 }
 
 /** 音频控制相关 **/
-const musics = [{ url: 'libs/music/0.mp3', title: 'Fearless' }, { url: 'libs/music/1.mp3', title: 'Qiu Mansion' }];
+const musics = [
+  { url: "libs/music/0.mp3", title: "Fearless" },
+  { url: "libs/music/1.mp3", title: "Qiu Mansion" },
+];
 
 function play() {
-  const audio = document.getElementById('audio');
+  const audio = document.getElementById("audio");
   musicPlaying = true;
-  $('#play-btn i').addClass('animePlay');
+  $("#play-btn i").addClass("animePlay");
   audio.play();
 }
 
 function pause() {
-  const audio = document.getElementById('audio');
+  const audio = document.getElementById("audio");
   musicPlaying = false;
-  $('#play-btn i').removeClass('animePlay');
+  $("#play-btn i").removeClass("animePlay");
   audio.pause();
 }
 
 function next() {
-  const audio = document.getElementById('audio');
+  const audio = document.getElementById("audio");
   let musicNow = musicNum + 1 > musics.length - 1 ? 0 : musicNum + 1;
   musicNum = musicNow;
   audio.pause();
   audio.src = musics[musicNow].url;
   musicPlaying = true;
-  $('#play-btn i').addClass('animePlay');
-  $('#music-name').text(musics[musicNow].title);
+  $("#play-btn i").addClass("animePlay");
+  $("#music-name").text(musics[musicNow].title);
   audio.play();
 }
