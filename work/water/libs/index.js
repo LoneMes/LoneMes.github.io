@@ -239,12 +239,16 @@ function initStarSky() {
   const geom = new THREE.Geometry();
   const range = 700; // 横向范围
   const rangex = 2000; // 纵向范围
-  const offset = 25; // 补偿，为了不碰到飞船
+  const offset = 15; // 补偿，为了不碰到飞船
   for (let i = 0; i < 8000; i++) {
     let y = Math.random() * range - range / 2;
     let z = Math.random() * range - range / 2;
-    y = y > 0 ? y + offset : y - offset;
-    z = z > 0 ? z + offset : z - offset;
+    if (y < offset && z < offset && y > -offset && z > -offset) {
+      const r = Math.random() * (range / 2 - offset) + offset;
+      y = y > 0 ? y + r : y - r;
+      z = z > 0 ? z + r : z - r;
+    }
+
     const particle = new THREE.Vector3(
       Math.random() * rangex - rangex / 2,
       y,
@@ -273,8 +277,12 @@ function initStarSky() {
     const x = Math.random() * 3000 - 1500;
     let y = Math.random() * 500 - 250;
     let z = Math.random() * 500 - 250;
-    y = y > 0 ? y + offset : y - offset;
-    z = z > 0 ? z + offset : z - offset;
+    if (y < offset && z < offset && y > -offset && z > -offset) {
+      const r = Math.random() * (250 - offset) + offset;
+      y = y > 0 ? y + r : y - r;
+      z = z > 0 ? z + r : z - r;
+    }
+
     const lang = Math.random() * 100 + 200;
     points.push(x, y, z, x + lang, y, z);
   }
@@ -627,7 +635,7 @@ function animate() {
   } else if (showType === 3) {
     if (animeObj.star_speed > -40) {
       // 初阶段加速
-      animeObj.star_speed -= 0.1;
+      animeObj.star_speed -= 0.08;
       tunnel.material.opacity += 0.001;
       outlinePass.edgeStrength += 0.005;
     } else {
