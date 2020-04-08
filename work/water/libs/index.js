@@ -80,7 +80,12 @@ let outlinePass; // 外边框
 /** 初始化三要素 **/
 function init3boss() {
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1500);
+  camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1500
+  );
   renderer = new THREE.WebGLRenderer();
 
   camera.position.set(-10, 0, -50);
@@ -92,7 +97,10 @@ function init3boss() {
 
 /** 初始化镜头控制器 **/
 function initCameraControl() {
-  cameraControls = new THREE.OrbitControls(camera, document.getElementById("canvas-box"));
+  cameraControls = new THREE.OrbitControls(
+    camera,
+    document.getElementById("canvas-box")
+  );
   cameraControls.target.set(0, 0, 0);
   cameraControls.maxDistance = 100;
   cameraControls.minDistance = 40;
@@ -181,8 +189,12 @@ function createCone(position) {
   const plane2 = plane1.clone();
   plane2.rotation.x = (Math.PI / 180) * 90;
 
-  plane1.position.copy(new THREE.Vector3(position.x + height / 2, position.y, 0));
-  plane2.position.copy(new THREE.Vector3(position.x + height / 2, position.y, 0));
+  plane1.position.copy(
+    new THREE.Vector3(position.x + height / 2, position.y, 0)
+  );
+  plane2.position.copy(
+    new THREE.Vector3(position.x + height / 2, position.y, 0)
+  );
 
   return { plane1: plane1, plane2: plane2 };
 }
@@ -193,7 +205,14 @@ function makeStarTexture() {
   canvas.width = 16;
   canvas.height = 16;
   const pen = canvas.getContext("2d");
-  const gradient = pen.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+  const gradient = pen.createRadialGradient(
+    canvas.width / 2,
+    canvas.height / 2,
+    0,
+    canvas.width / 2,
+    canvas.height / 2,
+    canvas.width / 2
+  );
   gradient.addColorStop(0, "rgba(255,255,255,1)");
   gradient.addColorStop(0.2, "rgba(0,255,255,1)");
   gradient.addColorStop(0.4, "rgba(0,0,164,1)");
@@ -220,8 +239,17 @@ function initStarSky() {
   const geom = new THREE.Geometry();
   const range = 700; // 横向范围
   const rangex = 2000; // 纵向范围
+  const offset = 25; // 补偿，为了不碰到飞船
   for (let i = 0; i < 8000; i++) {
-    const particle = new THREE.Vector3(Math.random() * rangex - rangex / 2, Math.random() * range - range / 2, Math.random() * range - range / 2);
+    let y = Math.random() * range - range / 2;
+    let z = Math.random() * range - range / 2;
+    y = y > 0 ? y + offset : y - offset;
+    z = z > 0 ? z + offset : z - offset;
+    const particle = new THREE.Vector3(
+      Math.random() * rangex - rangex / 2,
+      y,
+      z
+    );
     geom.vertices.push(particle);
     const color = new THREE.Color(0x00ffcc);
     geom.colors.push(color);
@@ -243,13 +271,18 @@ function initStarSky() {
   /** 定义顶点 **/
   for (let i = 0; i < 1000; i++) {
     const x = Math.random() * 3000 - 1500;
-    const y = Math.random() * 500 - 250;
-    const z = Math.random() * 500 - 250;
+    let y = Math.random() * 500 - 250;
+    let z = Math.random() * 500 - 250;
+    y = y > 0 ? y + offset : y - offset;
+    z = z > 0 ? z + offset : z - offset;
     const lang = Math.random() * 100 + 200;
     points.push(x, y, z, x + lang, y, z);
   }
 
-  geometry.addAttribute("position", new THREE.Float32BufferAttribute(points, 3)); // 设置顶点们
+  geometry.addAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(points, 3)
+  ); // 设置顶点们
 
   const material2 = new THREE.LineBasicMaterial({
     color: 0x638daf,
@@ -406,7 +439,7 @@ function initAppendage() {
   ship_line4_g.vertices.push(new THREE.Vector3(0, 5, 0));
 
   const line4 = new MeshLine();
-  line4.setGeometry(ship_line4_g, function(p) {
+  line4.setGeometry(ship_line4_g, function (p) {
     return 1 - p;
   });
 
@@ -432,7 +465,8 @@ function init2dLabel() {
   const label1Div = document.createElement("div");
   label1Div.className = "title2d";
   label1Div.id = "title2d";
-  label1Div.innerHTML = '<div class="t pointernone">Waterdrop</div><div class="l1"></div><div class="l2"></div>';
+  label1Div.innerHTML =
+    '<div class="t pointernone">Waterdrop</div><div class="l1"></div><div class="l2"></div>';
 
   const label1 = new THREE.CSS2DObject(label1Div);
   label1.position.set(15, 15, 0); // 将其坐标设置为原点偏上
@@ -464,7 +498,11 @@ function initComposer() {
   composer.addPass(renderPass);
 
   /** 后处理 - 外边框 **/
-  outlinePass = new THREE.OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
+  outlinePass = new THREE.OutlinePass(
+    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    scene,
+    camera
+  );
   outlinePass.edgeStrength = 0.1; // 0就看不见了
   outlinePass.edgeGlow = 1;
   outlinePass.edgeThickness = 3;
@@ -473,7 +511,10 @@ function initComposer() {
 
   /** 后处理 - 抗锯齿 **/
   effectFXAA = new THREE.ShaderPass(THREE.FXAAShader);
-  effectFXAA.uniforms["resolution"].value.set(1 / window.innerWidth, 1 / window.innerHeight);
+  effectFXAA.uniforms["resolution"].value.set(
+    1 / window.innerWidth,
+    1 / window.innerHeight
+  );
   effectFXAA.renderToScreen = true;
   composer.addPass(effectFXAA);
 
@@ -509,24 +550,24 @@ function initAllTexturesAndImgs() {
   const cubeLoader = new THREE.CubeTextureLoader();
   loader.load(
     "./libs/imgs/lightray_red.jpg",
-    function(texture) {
+    function (texture) {
       cone_texture = texture;
       checkLoading();
     },
     null,
-    function(err) {
+    function (err) {
       console.log("光锥纹理加载失败", err);
     }
   );
 
   loader.load(
     "./libs/imgs/001_electric.jpg",
-    function(texture) {
+    function (texture) {
       tunnel_texture = texture;
       checkLoading();
     },
     null,
-    function(err) {
+    function (err) {
       console.log("时空隧道纹理加载失败", err);
     }
   );
@@ -540,12 +581,12 @@ function initAllTexturesAndImgs() {
       "libs/imgs/skybox/posz.jpg",
       "libs/imgs/skybox/negz.jpg",
     ],
-    function(texture) {
+    function (texture) {
       skybox_texture = texture;
       checkLoading();
     },
     null,
-    function(err) {
+    function (err) {
       console.log("天空盒纹理加载失败", err);
     }
   );
@@ -558,7 +599,10 @@ function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   composer.setSize(window.innerWidth, window.innerHeight);
   labelRenderer.setSize(window.innerWidth, window.innerHeight);
-  effectFXAA.uniforms["resolution"].value.set(1 / window.innerWidth, 1 / window.innerHeight);
+  effectFXAA.uniforms["resolution"].value.set(
+    1 / window.innerWidth,
+    1 / window.innerHeight
+  );
 }
 
 /** animate动画相关 **/
@@ -596,7 +640,7 @@ function animate() {
       lineMesh.visible = true;
       lineMesh2.visible = true;
       tunnel.material.opacity = 1;
-      setTimeout(function() {
+      setTimeout(function () {
         showType = 5;
         glitchPass.renderToScreen = false;
         $("#ship-type-ul").css("transform", "translateY(-100px)");
@@ -633,7 +677,8 @@ function animate() {
 
 // 速度脉动
 function speedRipple() {
-  animeObj.shipSpeed = animeObj.shipSpeed > 1079252848.7 ? 1079252848.7 : 1079252848.8;
+  animeObj.shipSpeed =
+    animeObj.shipSpeed > 1079252848.7 ? 1079252848.7 : 1079252848.8;
   speedDom.innerText = animeObj.shipSpeed.toFixed(2);
   setTimeout(speedRipple, Math.random() * 600 + 100);
 }
@@ -836,7 +881,7 @@ function animate_rayhover() {
 }
 
 function initNames() {
-  users.sort(function(a, b) {
+  users.sort(function (a, b) {
     return b.s - a.s;
   });
   let str = "";
@@ -845,7 +890,7 @@ function initNames() {
     let n = "";
     if (users[i].n instanceof Array) {
       n = users[i].n
-        .map(function(item, index) {
+        .map(function (item, index) {
           return item.indexOf("libs/") > -1 ? '<img src="' + item + '">' : item;
         })
         .join("");
@@ -889,7 +934,7 @@ function init() {
   labelRenderer.render(scene, camera);
 
   // 绑定音频事件
-  $("#play-btn").on("click", function() {
+  $("#play-btn").on("click", function () {
     if (musicPlaying) {
       musicPlaying = false;
       pause();
@@ -902,7 +947,7 @@ function init() {
   $("#audio").on("ended", next);
 
   // 菜单事件
-  $("#menu-w").on("click", function(e) {
+  $("#menu-w").on("click", function (e) {
     const $p = $("#page-w");
     if ($p.hasClass("show")) {
       // 当前页已经出现了
@@ -913,7 +958,7 @@ function init() {
       $p.scrollTop(0).addClass("show");
     }
   });
-  $("#menu-m").on("click", function(e) {
+  $("#menu-m").on("click", function (e) {
     const $p = $("#page-m");
     if ($p.hasClass("show")) {
       // 当前页已经出现了
@@ -924,7 +969,7 @@ function init() {
       $p.scrollTop(0).addClass("show");
     }
   });
-  $("#menu-t").on("click", function(e) {
+  $("#menu-t").on("click", function (e) {
     const $p = $("#page-t");
     if ($p.hasClass("show")) {
       // 当前页已经出现了
@@ -935,15 +980,15 @@ function init() {
       $p.scrollTop(0).addClass("show");
     }
   });
-  $("#close").on("click", function() {
+  $("#close").on("click", function () {
     $("#pages-box, #pages-box>div, #close").removeClass("show");
   });
 
-  $("#pages-box").on("touchmove mousewheel DOMMouseScroll", function(e) {
+  $("#pages-box").on("touchmove mousewheel DOMMouseScroll", function (e) {
     e.stopPropagation();
   });
 
-  setTimeout(function() {
+  setTimeout(function () {
     title2d = $("#title2d");
     label2d = $("#label2");
   });
@@ -958,14 +1003,14 @@ initAllTexturesAndImgs(); // 加载所有资源
 function initWords() {
   const $i = $("#title>i");
 
-  $i.each(function(index, dom) {
+  $i.each(function (index, dom) {
     dom.style.transitionDelay = Math.floor(Math.random() * 2500 + 500) + "ms";
   });
 }
 
 // 初始化不同阶段的出现逻辑
 function initShow() {
-  $("#ship-info-btn").on("click", function() {
+  $("#ship-info-btn").on("click", function () {
     var shipInfoBtn = $(this);
     if (!shipInfoBtn.hasClass("show")) {
       return;
@@ -989,14 +1034,12 @@ function initShow() {
 function show1() {
   animate();
   showType = 1;
-  $("#mask").fadeOut(5000, function() {
+  $("#mask").fadeOut(5000, function () {
     $("#menu").addClass("show");
-    setTimeout(function() {
+    setTimeout(function () {
       $("#ship-type-ul").css("transform", "translateY(-40px)");
       $("#ship-info-btn .btn-word").text("起航");
-      $("#ship-info-btn")
-        .data("type", 2)
-        .addClass("show");
+      $("#ship-info-btn").data("type", 2).addClass("show");
       $("#ship-info-box,#logo").css("z-index", "10");
       $("#menu li").css("transition", "all 200ms !important");
     }, 2000);
@@ -1009,6 +1052,7 @@ function show1() {
 }
 
 // 常规推进
+const CoordinateOrigin = new THREE.Vector3(0, 0, 0);
 function show2() {
   $("#title-box").removeClass("show");
   showType = 2;
@@ -1024,26 +1068,24 @@ function show2() {
       4000
     )
     .easing(TWEEN.Easing.Quadratic.InOut)
-    .onUpdate(function() {
+    .onUpdate(function () {
       camera.position.x = this.x;
       camera.position.z = this.z;
-      camera.lookAt(new THREE.Vector3(0, 0, 0));
+      camera.lookAt(CoordinateOrigin);
     })
-    .onComplete(function() {
+    .onComplete(function () {
       $("#control-remind").addClass("show");
       $("#ship-info-box").addClass("pointernone");
       cameraControls.enabled = true;
       showType = 2.5; // 表示第2阶段已完毕
-      setTimeout(function() {
+      setTimeout(function () {
         $("#control-remind").removeClass("show");
       }, 5000);
-      setTimeout(function() {
+      setTimeout(function () {
         $("#ship-info-box").removeClass("pointernone");
         $("#ship-type-ul").css("transform", "translateY(-80px)");
         $("#ship-info-btn .btn-word").text("开始星际穿梭");
-        $("#ship-info-btn")
-          .data("type", 3)
-          .addClass("show");
+        $("#ship-info-btn").data("type", 3).addClass("show");
       }, 10000);
     });
   tween.start();
@@ -1053,11 +1095,11 @@ function show2() {
     round: 1,
     easing: "linear",
     duration: 4000,
-    update: function() {
+    update: function () {
       speedDom.innerText = animeObj.shipSpeed.toFixed(2);
     },
   });
-  setTimeout(function() {
+  setTimeout(function () {
     $("#ship-type-ul").css("transform", "translateY(-60px)");
   }, 4000);
 }
@@ -1074,7 +1116,7 @@ function show3() {
     shipSpeed: [{ value: 1079252848, duration: 12000 }], // 1079252848.8
     round: 1,
     easing: "linear",
-    update: function() {
+    update: function () {
       speedDom.innerText = animeObj.shipSpeed.toFixed(2);
     },
   });
