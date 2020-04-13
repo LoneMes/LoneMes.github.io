@@ -4,23 +4,36 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="renderer" content="webkit" />
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,user-scalable=no"
+    />
     <meta name="author" content="Logic" />
     <meta name="description" content="Logic个人网站" />
     <meta name="keywords" content="Logic,isluo,luo" />
     <meta http-equiv="X-XSS-Protection" , content="1;mode=block" />
     <meta http-equiv="X-Content-Type-Options" , content="nosniff" />
-    <meta http-equiv="Strict-Transport-Security" , content="max-age=63072000; preload" />
-    <meta http-equiv='Content-Security-Policy', content:="script-src 'self';object-src 'none';" />
-    <meta name="google-site-verification" content="LVNBueiOHE8djpIHZM_me9ffQXGkQrqCOy7AUEWx6u4" />
+    <meta
+      http-equiv="Strict-Transport-Security"
+      ,
+      content="max-age=63072000; preload"
+    />
+    <meta http-equiv='Content-Security-Policy', content:="script-src
+    'self';object-src 'none';" />
+    <meta
+      name="google-site-verification"
+      content="LVNBueiOHE8djpIHZM_me9ffQXGkQrqCOy7AUEWx6u4"
+    />
     <title>isluo</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="kernel/index/css/welcome.min.css" />
     <link rel="prefetch" href="/home.html" />
     <style>
       .blur {
-        transition: box-shadow 0.8s, transform 1s, width 1s, height 1s, opacity 0.3s;
-        -webkit-transition: box-shadow 0.8s, -webkit-transform 1s, width 1s, height 1s, opacity 0.3s;
+        transition: box-shadow 0.8s, transform 1s, width 1s, height 1s,
+          opacity 0.3s;
+        -webkit-transition: box-shadow 0.8s, -webkit-transform 1s, width 1s,
+          height 1s, opacity 0.3s;
         transition-timing-function: ease-in;
         -webkit-transition-timing-function: ease-in;
         top: 50%;
@@ -48,7 +61,8 @@
       .l_1 {
         position: absolute;
         transform: rotate(45deg) rotateX(-5deg) rotateY(-3deg) translateZ(320px);
-        -webkit-transform: rotate(45deg) rotateX(-5deg) rotateY(-3deg) translateZ(320px);
+        -webkit-transform: rotate(45deg) rotateX(-5deg) rotateY(-3deg)
+          translateZ(320px);
         background-color: #fff;
         width: 0;
         height: 38px;
@@ -57,8 +71,10 @@
       }
       .l_2 {
         position: absolute;
-        transform: rotate(-40deg) rotateX(-2deg) rotateY(15deg) translateZ(320px);
-        -webkit-transform: rotate(-40deg) rotateX(-2deg) rotateY(15deg) translateZ(320px);
+        transform: rotate(-40deg) rotateX(-2deg) rotateY(15deg)
+          translateZ(320px);
+        -webkit-transform: rotate(-40deg) rotateX(-2deg) rotateY(15deg)
+          translateZ(320px);
         background-color: #fff;
         width: 0;
         height: 36px;
@@ -67,8 +83,10 @@
       }
       .l_3 {
         position: absolute;
-        transform: rotate(-30deg) rotateX(-5deg) rotateY(-4deg) translateZ(320px);
-        -webkit-transform: rotate(-30deg) rotateX(-5deg) rotateY(-4deg) translateZ(320px);
+        transform: rotate(-30deg) rotateX(-5deg) rotateY(-4deg)
+          translateZ(320px);
+        -webkit-transform: rotate(-30deg) rotateX(-5deg) rotateY(-4deg)
+          translateZ(320px);
         background-color: #fff;
         width: 22px;
         height: 0;
@@ -78,7 +96,8 @@
       .l_4 {
         position: absolute;
         transform: rotate(25deg) rotateX(2deg) rotateY(15deg) translateZ(320px);
-        -webkit-transform: rotate(25deg) rotateX(2deg) rotateY(15deg) translateZ(320px);
+        -webkit-transform: rotate(25deg) rotateX(2deg) rotateY(15deg)
+          translateZ(320px);
         background-color: #fff;
         width: 20px;
         height: 0;
@@ -134,11 +153,17 @@
       <div id="l_2" class="l_2 blur"></div>
       <div id="l_3" class="l_3 blur"></div>
       <div id="l_4" class="l_4 blur"></div>
-      <div id="l_5" class="l_5 transtionOpacity">oading<span id="l_6" class="l_6">...</span></div>
+      <div id="l_5" class="l_5 transtionOpacity">
+        oading<span id="l_6" class="l_6">...</span>
+      </div>
     </div>
     <script type="text/javascript">
-      document.getElementById("l_4").addEventListener("webkitTransitionEnd", loading_2, false);
-      document.getElementById("l_4").addEventListener("transitionend", loading_2, false);
+      document
+        .getElementById("l_4")
+        .addEventListener("webkitTransitionEnd", loading_2, false);
+      document
+        .getElementById("l_4")
+        .addEventListener("transitionend", loading_2, false);
       function loadin() {
         var l1s = document.getElementById("l_1").style;
         l1s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
@@ -146,7 +171,7 @@
         l1s["height"] = "20px";
         l1s["opacity"] = "1";
         l1s.boxShadow = "0 0 0 1px #FFFFFF";
-        loadtimer1 = setTimeout(function() {
+        loadtimer1 = setTimeout(function () {
           var l2s = document.getElementById("l_2").style;
           l2s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
           l2s["transform"] = "rotateX(0) rotateY(0) translateZ(0)";
@@ -154,7 +179,7 @@
           l2s["opacity"] = "1";
           l2s.boxShadow = "0 0 0 1px #FFFFFF";
         }, 250);
-        loadtimer2 = setTimeout(function() {
+        loadtimer2 = setTimeout(function () {
           var l3s = document.getElementById("l_3").style;
           l3s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
           l3s["transform"] = "rotateX(0) rotateY(0) translateZ(0)";
@@ -162,7 +187,7 @@
           l3s["opacity"] = "1";
           l3s.boxShadow = "0 0 0 1px #FFFFFF";
         }, 500);
-        loadtimer3 = setTimeout(function() {
+        loadtimer3 = setTimeout(function () {
           var l4s = document.getElementById("l_4").style;
           l4s["-webkit-transform"] = "rotateX(0) rotateY(0) translateZ(0)";
           l4s["transform"] = "rotateX(0) rotateY(0) translateZ(0)";
@@ -176,7 +201,8 @@
         load_i++;
         if (load_i >= 4) {
           document.getElementById("l_5").style["opacity"] = "1";
-          document.getElementById("l_6").style["-webkit-animation-play-state"] = "running";
+          document.getElementById("l_6").style["-webkit-animation-play-state"] =
+            "running";
           document.getElementById("l_6").style.animationPlayState = "running";
         }
       }
@@ -187,7 +213,7 @@
           loadtimer = setTimeout("loadout()", 500);
           return;
         }
-        setTimeout(function() {
+        setTimeout(function () {
           document.getElementById("loadingbox").style["opacity"] = "0";
           var obj = document.getElementById("l_6");
           obj.parentNode.removeChild(obj);
@@ -200,11 +226,19 @@
     <div id="checkrower"></div>
     <div id="box3d">
       <div id="box3d_a" class="l_transition2">
-        <img id="box3d_girl" src="kernel/index/img/welcome/girl.png" alt="girl" />
+        <img
+          id="box3d_girl"
+          src="kernel/index/img/welcome/girl.png"
+          alt="girl"
+        />
       </div>
       <div id="box3d_btn">
-        <div id="l_gbr_box"><div id="l_gbr" class="l_transition05">片头欣赏</div></div>
-        <div id="l_gbl_box"><div id="l_gbl" class="l_transition05">进入主页</div></div>
+        <div id="l_gbr_box">
+          <div id="l_gbr" class="l_transition05">片头欣赏</div>
+        </div>
+        <div id="l_gbl_box">
+          <div id="l_gbl" class="l_transition05">进入主页</div>
+        </div>
       </div>
     </div>
     <img id="logo" src="kernel/index/img/welcome/logo.png" />
@@ -231,9 +265,9 @@
       <div class="lastword" id="word3">欢迎访问我的世界</div>
       <div class="lastword" id="word4">isluo.com</div>
     </div>
-    <div id="footer">Copyright © 2014-2019 By Logic</div>
+    <div id="footer">© 2014-2020 By Logic</div>
     <audio id="showmusic" src="kernel/index/mp3/m1.mp3"></audio>
-    <div style="display:none">
+    <div style="display: none;">
       <img src="kernel/index/img/welcome/y1.jpg" />
       <img src="kernel/index/img/welcome/y2.jpg" />
       <img src="kernel/index/img/welcome/y3.jpg" />
