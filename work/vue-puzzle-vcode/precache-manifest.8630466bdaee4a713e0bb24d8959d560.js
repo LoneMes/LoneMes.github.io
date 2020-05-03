@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7c2fffcd2e7351cf2be8",
+    "revision": "f4367479ba772acf7a9a",
     "url": "/work/vue-puzzle-vcode/css/about.b1b95d00.css"
   },
   {
-    "revision": "a208c3f9289787220b30",
-    "url": "/work/vue-puzzle-vcode/css/app.1df78cb1.css"
+    "revision": "6b5f3c7d7681ba38c2fe",
+    "url": "/work/vue-puzzle-vcode/css/app.a440ff05.css"
   },
   {
-    "revision": "ac635f69f11ee1e7e357",
-    "url": "/work/vue-puzzle-vcode/css/chunk-vendors.721bf389.css"
+    "revision": "90e4756fdb1e3a7b72a7",
+    "url": "/work/vue-puzzle-vcode/css/chunk-vendors.734ccb33.css"
   },
   {
-    "revision": "a236a832a9caacaf6ec86a06739f91ee",
+    "revision": "26f4e01db2f3ccbdf0969bbd7e77f139",
     "url": "/work/vue-puzzle-vcode/index.html"
   },
   {
-    "revision": "7c2fffcd2e7351cf2be8",
-    "url": "/work/vue-puzzle-vcode/js/about.a675e2d3.js"
+    "revision": "f4367479ba772acf7a9a",
+    "url": "/work/vue-puzzle-vcode/js/about.a328c70d.js"
   },
   {
-    "revision": "a208c3f9289787220b30",
-    "url": "/work/vue-puzzle-vcode/js/app.918b314b.js"
+    "revision": "6b5f3c7d7681ba38c2fe",
+    "url": "/work/vue-puzzle-vcode/js/app.1876ce09.js"
   },
   {
-    "revision": "ac635f69f11ee1e7e357",
-    "url": "/work/vue-puzzle-vcode/js/chunk-vendors.2bf024d0.js"
+    "revision": "90e4756fdb1e3a7b72a7",
+    "url": "/work/vue-puzzle-vcode/js/chunk-vendors.3ac5a322.js"
   },
   {
     "revision": "fa2908294528ba889748fd060a9adfba",
