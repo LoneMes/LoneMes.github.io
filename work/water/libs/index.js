@@ -20,6 +20,7 @@ const users = [
   { n: "真羽", s: 1 },
   { n: "veer", s: 0.01 },
   { n: "浮生六记", s: 1 },
+  { n: "Z(Hala Madrid)", s: 1 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
