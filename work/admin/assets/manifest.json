@@ -6,7 +6,7 @@
   "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
-  "start_url": "/work/admin/",
+  "start_url": "/work/admin",
   "background_color": "#222222",
   "theme_color": "#222222",
   "icons": [
