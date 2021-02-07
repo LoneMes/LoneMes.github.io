@@ -104,6 +104,7 @@ function init3boss() {
   camera.lookAt(new THREE.Vector3(0, 0, 0));
   renderer.setSize(window.innerWidth, window.innerHeight, true);
   renderer.setClearColor(0x000000);
+  renderer.checkShaderErrors = false;
   document.getElementById("canvas-box").appendChild(renderer.domElement);
 }
 
