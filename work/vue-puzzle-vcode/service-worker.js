@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/work/vue-puzzle-vcode/precache-manifest.8630466bdaee4a713e0bb24d8959d560.js"
+  "/work/vue-puzzle-vcode/precache-manifest.35f5caf547ecc627f3e943c3f4fdb192.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "vue-dna-demo"});
+workbox.core.setCacheNameDetails({prefix: "vvvv"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
