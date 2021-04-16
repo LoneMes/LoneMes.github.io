@@ -1,0 +1,1 @@
+.page{display:flex;justify-content:center;flex-direction:column;padding:40px}.title{text-align:center;font-size:24px}.box{min-width:320px;margin:40px auto 0 auto;color:#222}.box>div:first-child{margin-bottom:10px}.f{display:flex;align-items:center}.f span{width:120px}.f .el-input{width:180px}.a{margin:0 auto;padding:10px;color:#0882f5;text-decoration:none}.a:hover{color:#469ff3}
