@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/work/vue-exchange-depth/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "f7312e01fee9242fe2161d248325ea7a",
+    "revision": "e17913da0d642d05d586d417ef0f5b44",
     "url": "/work/vue-exchange-depth/index.html"
   },
   {
