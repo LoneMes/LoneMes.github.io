@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b50c118e115dff75bff",
-    "url": "/work/vue-exchange-depth/css/app.076856f9.css"
+    "revision": "3ca4597e85b1773f8795",
+    "url": "/work/vue-exchange-depth/css/app.ff5a5e7a.css"
   },
   {
-    "revision": "fb34f670a44bf6357105",
+    "revision": "2e83efaa4e89aae55dbd",
     "url": "/work/vue-exchange-depth/css/chunk-vendors.4739ea3f.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/work/vue-exchange-depth/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "e17913da0d642d05d586d417ef0f5b44",
+    "revision": "bc54d9e6a83159a5c3f22bf276248bb5",
     "url": "/work/vue-exchange-depth/index.html"
   },
   {
-    "revision": "9b50c118e115dff75bff",
-    "url": "/work/vue-exchange-depth/js/app.15a37f87.js"
+    "revision": "3ca4597e85b1773f8795",
+    "url": "/work/vue-exchange-depth/js/app.d17ce2be.js"
   },
   {
-    "revision": "fb34f670a44bf6357105",
-    "url": "/work/vue-exchange-depth/js/chunk-vendors.93418fd2.js"
+    "revision": "2e83efaa4e89aae55dbd",
+    "url": "/work/vue-exchange-depth/js/chunk-vendors.b0d9a189.js"
   },
   {
     "revision": "608704773ac9318d795191d9cadf8189",
