@@ -15,7 +15,7 @@
       console.log("ap", ap);
       document.querySelector("#test").addEventListener("click", function () {
         console.log("click:");
-        ap.getAuthCode({ appId: "2018082061109131", scopes: ["auth_user"] }, function (res) {
+        ap.getAuthCode({ appId: "2021002145626070", scopes: ["auth_user"] }, function (res) {
           console.log("得到了什么：", res);
           document.getElementById("info").innerText = JSON.stringify(res);
         });
