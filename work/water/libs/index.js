@@ -243,6 +243,7 @@ function initStarSky() {
   const range = 700; // 横向范围
   const rangex = 2000; // 纵向范围
   const offset = 15; // 补偿，为了不碰到飞船
+  const color = new THREE.Color(0x00ffcc);
   for (let i = 0; i < 8000; i++) {
     let y = Math.random() * range - range / 2;
     let z = Math.random() * range - range / 2;
@@ -254,7 +255,6 @@ function initStarSky() {
 
     const particle = new THREE.Vector3(Math.random() * rangex - rangex / 2, y, z);
     geom.vertices.push(particle);
-    const color = new THREE.Color(0x00ffcc);
     geom.colors.push(color);
   }
 
