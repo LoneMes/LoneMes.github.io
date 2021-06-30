@@ -40,6 +40,7 @@ const users = [
   { n: "希望重燃.", s: 10 },
   { n: "今天明天吃什么呢", w: "专升本复习完善成个人笔记最好", s: 5 },
   { n: "科捷智能科技-葛晋 Momiji", s: 66.6 },
+  { n: "dragon.", w: "加油鸭", s: 0.01 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
