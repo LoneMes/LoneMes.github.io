@@ -42,6 +42,8 @@ const users = [
   { n: "科捷智能科技-葛晋 Momiji", s: 66.6 },
   { n: "dragon.", w: "加油鸭", s: 0.01 },
   { n: "CoderWangx", w: "水滴很酷", s: 6.66 },
+  { n: "Doggy", w: "太牛了woc", s: 1 },
+  { n: "Mr O'G桑", s: 1 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
