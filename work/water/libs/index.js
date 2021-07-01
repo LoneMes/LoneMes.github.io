@@ -44,6 +44,7 @@ const users = [
   { n: "CoderWangx", w: "水滴很酷", s: 6.66 },
   { n: "Doggy", w: "太牛了woc", s: 1 },
   { n: "Mr O'G桑", s: 1 },
+  { n: "傅Fu", w: "需要批发二向箔", s: 3 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
