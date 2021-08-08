@@ -46,6 +46,7 @@ const users = [
   { n: "Mr O'G桑", s: 1 },
   { n: "傅Fu", w: "需要批发二向箔", s: 3 },
   { n: "我的网名十二个字不信你数", s: 5 },
+  { n: "把海弄干的鱼", s: 5 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
