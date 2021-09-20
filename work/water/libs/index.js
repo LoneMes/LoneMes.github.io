@@ -49,6 +49,7 @@ const users = [
   { n: "把海弄干的鱼", s: 5 },
   { n: "岁寒", s: 10, w: " " },
   { n: "青城山下㇏", s: 0.01, w: "冲鸭！孟照森！" },
+  { n: "T-800", s: 20 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
