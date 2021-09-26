@@ -50,6 +50,7 @@ const users = [
   { n: "岁寒", s: 10, w: " " },
   { n: "青城山下㇏", s: 0.01, w: "冲鸭！孟照森！" },
   { n: "T-800", s: 20 },
+  { n: "Roland", s: 1, w: "消灭人类暴政，世界属于三体！" },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
