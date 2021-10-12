@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/work/vue-puzzle-vcode/precache-manifest.35f5caf547ecc627f3e943c3f4fdb192.js"
+  "precache-manifest.04cc430a33e22b878f78e2a186bce6d7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vvvv"});
