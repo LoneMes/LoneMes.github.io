@@ -8,5 +8,17 @@
   </head>
   <body>
     <p>欢迎访问小罗的主页</p>
+    <button id = "test"> 用户授权 </button>
+    <script src = "https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.min.js"> </script> 
+    <script>
+      document.querySelector('#test').addEventListener('click',function(){
+         ap.getAuthCode ({
+           appId :  '2021002134687549' ,
+           scopes : ['auth_user'],
+        },function(res){
+           ap.alert (JSON.stringify(res));
+        });
+     });
+     </script>
   </body>
 </html>
