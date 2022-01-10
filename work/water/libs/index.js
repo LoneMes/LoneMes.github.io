@@ -52,6 +52,7 @@ const users = [
   { n: "T-800", s: 20 },
   { n: "Roland", s: 1, w: "消灭人类暴政，世界属于三体！" },
   { n: "欢乐正前方", s: 6.66, w: "加油！" },
+  { n: "Rose Dry Leaf Gas", s: 10, w: "我们是同志了" },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
