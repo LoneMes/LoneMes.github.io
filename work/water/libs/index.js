@@ -54,6 +54,7 @@ const users = [
   { n: "欢乐正前方", s: 6.66, w: "加油！" },
   { n: "Rose Dry Leaf Gas", s: 10, w: "我们是同志了" },
   { n: "邶陂以北", s: 0.1, w: "真就这些，不多，世界属于三体，跃迁中" },
+  { n: "王", s: 2 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
