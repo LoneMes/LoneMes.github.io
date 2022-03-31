@@ -57,6 +57,7 @@ const users = [
   { n: "王", s: 2 },
   { n: "23:33", s: 1, w: "太酷了" },
   { n: "吴", s: 2, w: "消灭人类暴政，世界属于三体" },
+  { n: "风", s: 10, w: "支持！" },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
