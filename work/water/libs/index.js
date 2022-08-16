@@ -119,7 +119,12 @@ let outlinePass; // 外边框
 /** 初始化三要素 **/
 function init3boss() {
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1500);
+  camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1500
+  );
   renderer = new THREE.WebGLRenderer();
 
   camera.position.set(-10, 0, -50);
@@ -132,7 +137,10 @@ function init3boss() {
 
 /** 初始化镜头控制器 **/
 function initCameraControl() {
-  cameraControls = new THREE.OrbitControls(camera, document.getElementById("canvas-box"));
+  cameraControls = new THREE.OrbitControls(
+    camera,
+    document.getElementById("canvas-box")
+  );
   cameraControls.target.set(0, 0, 0);
   cameraControls.maxDistance = 100;
   cameraControls.minDistance = 40;
@@ -221,8 +229,12 @@ function createCone(position) {
   const plane2 = plane1.clone();
   plane2.rotation.x = (Math.PI / 180) * 90;
 
-  plane1.position.copy(new THREE.Vector3(position.x + height / 2, position.y, 0));
-  plane2.position.copy(new THREE.Vector3(position.x + height / 2, position.y, 0));
+  plane1.position.copy(
+    new THREE.Vector3(position.x + height / 2, position.y, 0)
+  );
+  plane2.position.copy(
+    new THREE.Vector3(position.x + height / 2, position.y, 0)
+  );
 
   return { plane1: plane1, plane2: plane2 };
 }
@@ -233,7 +245,14 @@ function makeStarTexture() {
   canvas.width = 16;
   canvas.height = 16;
   const pen = canvas.getContext("2d");
-  const gradient = pen.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+  const gradient = pen.createRadialGradient(
+    canvas.width / 2,
+    canvas.height / 2,
+    0,
+    canvas.width / 2,
+    canvas.height / 2,
+    canvas.width / 2
+  );
   gradient.addColorStop(0, "rgba(255,255,255,1)");
   gradient.addColorStop(0.2, "rgba(0,255,255,1)");
   gradient.addColorStop(0.4, "rgba(0,0,164,1)");
@@ -271,7 +290,11 @@ function initStarSky() {
       z = z > 0 ? z + r : z - r;
     }
 
-    const particle = new THREE.Vector3(Math.random() * rangex - rangex / 2, y, z);
+    const particle = new THREE.Vector3(
+      Math.random() * rangex - rangex / 2,
+      y,
+      z
+    );
     geom.vertices.push(particle);
     geom.colors.push(color);
   }
@@ -304,7 +327,10 @@ function initStarSky() {
     points.push(x, y, z, x + lang, y, z);
   }
 
-  geometry.addAttribute("position", new THREE.Float32BufferAttribute(points, 3)); // 设置顶点们
+  geometry.addAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(points, 3)
+  ); // 设置顶点们
 
   const material2 = new THREE.LineBasicMaterial({
     color: 0x638daf,
@@ -487,7 +513,8 @@ function init2dLabel() {
   const label1Div = document.createElement("div");
   label1Div.className = "title2d";
   label1Div.id = "title2d";
-  label1Div.innerHTML = '<div class="t pointernone">Waterdrop</div><div class="l1"></div><div class="l2"></div>';
+  label1Div.innerHTML =
+    '<div class="t pointernone">Waterdrop</div><div class="l1"></div><div class="l2"></div>';
 
   const label1 = new THREE.CSS2DObject(label1Div);
   label1.position.set(15, 15, 0); // 将其坐标设置为原点偏上
@@ -497,7 +524,8 @@ function init2dLabel() {
   const label2Div = document.createElement("div");
   label2Div.className = "label2";
   label2Div.id = "label2";
-  label2Div.innerHTML = '<p class="pointernone">这是2.0版本的"水滴"</p><p>配置了<i>曲率驱动引擎</i>及强互作用力外壳</p><p>由半人马星座α星系朝着太阳系行进</p><p>约<i>4个地球年</i>后抵达</p><p>国家天文台已能捕获其图像</p>';
+  label2Div.innerHTML =
+    '<p class="pointernone">这是2.0版本的"水滴"</p><p>配置了<i>曲率驱动引擎</i>及强互作用力外壳</p><p>由半人马星座α星系朝着太阳系行进</p><p>约<i>4个地球年</i>后抵达</p><p>国家天文台已能捕获其图像</p>';
   const label2 = new THREE.CSS2DObject(label2Div);
   label2.position.set(10, 50, 0);
   water_mesh.add(label2);
@@ -518,7 +546,11 @@ function initComposer() {
   composer.addPass(renderPass);
 
   /** 后处理 - 外边框 **/
-  outlinePass = new THREE.OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene, camera);
+  outlinePass = new THREE.OutlinePass(
+    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    scene,
+    camera
+  );
   outlinePass.edgeStrength = 0.1; // 0就看不见了
   outlinePass.edgeGlow = 1;
   outlinePass.edgeThickness = 3;
@@ -527,7 +559,10 @@ function initComposer() {
 
   /** 后处理 - 抗锯齿 **/
   effectFXAA = new THREE.ShaderPass(THREE.FXAAShader);
-  effectFXAA.uniforms["resolution"].value.set(1 / window.innerWidth, 1 / window.innerHeight);
+  effectFXAA.uniforms["resolution"].value.set(
+    1 / window.innerWidth,
+    1 / window.innerHeight
+  );
   effectFXAA.renderToScreen = true;
   composer.addPass(effectFXAA);
 
@@ -570,7 +605,7 @@ function initAllTexturesAndImgs() {
     null,
     function (err) {
       console.log("光锥纹理加载失败", err);
-    },
+    }
   );
 
   loader.load(
@@ -582,11 +617,18 @@ function initAllTexturesAndImgs() {
     null,
     function (err) {
       console.log("时空隧道纹理加载失败", err);
-    },
+    }
   );
 
   cubeLoader.load(
-    ["libs/imgs/skybox/posx.jpg", "libs/imgs/skybox/negx.jpg", "libs/imgs/skybox/posy.jpg", "libs/imgs/skybox/negy.jpg", "libs/imgs/skybox/posz.jpg", "libs/imgs/skybox/negz.jpg"],
+    [
+      "libs/imgs/skybox/posx.jpg",
+      "libs/imgs/skybox/negx.jpg",
+      "libs/imgs/skybox/posy.jpg",
+      "libs/imgs/skybox/negy.jpg",
+      "libs/imgs/skybox/posz.jpg",
+      "libs/imgs/skybox/negz.jpg",
+    ],
     function (texture) {
       skybox_texture = texture;
       checkLoading();
@@ -594,7 +636,7 @@ function initAllTexturesAndImgs() {
     null,
     function (err) {
       console.log("天空盒纹理加载失败", err);
-    },
+    }
   );
 }
 
@@ -605,7 +647,10 @@ function onResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   composer.setSize(window.innerWidth, window.innerHeight);
   labelRenderer.setSize(window.innerWidth, window.innerHeight);
-  effectFXAA.uniforms["resolution"].value.set(1 / window.innerWidth, 1 / window.innerHeight);
+  effectFXAA.uniforms["resolution"].value.set(
+    1 / window.innerWidth,
+    1 / window.innerHeight
+  );
 }
 
 /** animate动画相关 **/
@@ -680,7 +725,8 @@ function animate() {
 
 // 速度脉动
 function speedRipple() {
-  animeObj.shipSpeed = animeObj.shipSpeed > 1079252848.7 ? 1079252848.7 : 1079252848.8;
+  animeObj.shipSpeed =
+    animeObj.shipSpeed > 1079252848.7 ? 1079252848.7 : 1079252848.8;
   speedDom.innerText = animeObj.shipSpeed.toFixed(2);
   setTimeout(speedRipple, Math.random() * 600 + 100);
 }
@@ -900,7 +946,9 @@ function initNames() {
       n = users[i].n;
     }
 
-    str += `<li><div>${n}</div>${users[i].w ? `<div class="w">(${users[i].w})</div>` : ""}<div class="s">¥${users[i].s}</div></li>`;
+    str += `<li><div>${n}</div>${
+      users[i].w ? `<div class="w">(${users[i].w})</div>` : ""
+    }<div class="s">¥${users[i].s}</div></li>`;
     num += users[i].s;
   }
 
@@ -1003,11 +1051,13 @@ function init() {
 initAllTexturesAndImgs(); // 加载所有资源
 
 function initWords() {
-  const $i = $("#title>i");
-
-  $i.each(function (index, dom) {
-    dom.style.transitionDelay = Math.floor(Math.random() * 2500 + 500) + "ms";
-  });
+  const $span = $("#title>span");
+  const $i = $("#title>span>i");
+  for (let i = 0; i < $i.length; i++) {
+    const trans = Math.floor(Math.random() * 2500 + 500) + "ms";
+    $span[i].style.transitionDelay = trans;
+    $i[i].style.transitionDelay = trans;
+  }
 }
 
 // 初始化不同阶段的出现逻辑
@@ -1067,7 +1117,7 @@ function show2() {
         x: -50,
         z: -18,
       },
-      4000,
+      4000
     )
     .easing(TWEEN.Easing.Quadratic.InOut)
     .onUpdate(function () {
