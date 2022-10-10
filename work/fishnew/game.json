@@ -1,0 +1,11 @@
+{
+    "deviceOrientation": "portrait",
+    "showStatusBar": true,
+    "openDataContext": "openDataContext",
+    "subpackages": [
+        {
+            "name": "packageSuccess",
+            "root": "packageSuccess/"
+        }
+    ]
+}
