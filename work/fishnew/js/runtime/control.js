@@ -2,9 +2,9 @@ import Sprite from "../base/sprite.js";
 import { makeImgSize } from "../base/util.js";
 import Userinfo from "../materials/userinfo.js";
 
-const BG_IMG_SRC = "/images/assets/control.jpg"; //"https://s1.ax1x.com/2022/09/19/x9xHhT.png";
-const BTN1_SRC = "/images/gameing/btn1.png";
-const BTN_RESET_SRC = "/images/gameing/btn_reset.png";
+const BG_IMG_SRC = "images/assets/control.jpg"; //"https://s1.ax1x.com/2022/09/19/x9xHhT.png";
+const BTN1_SRC = "images/gameing/btn1.png";
+const BTN_RESET_SRC = "images/gameing/btn_reset.png";
 
 let imgBack;
 let btn_left;

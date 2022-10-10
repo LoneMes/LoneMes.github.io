@@ -1,8 +1,8 @@
 // 全局都要显示的UI
 import Sprite from "../base/sprite.js";
 
-const BTN_MUSIC_OPEN = "/images/global/icon_music_open.png";
-const BTN_MUSIC_CLOSE = "/images/global/icon_music_close.png";
+const BTN_MUSIC_OPEN = "images/global/icon_music_open.png";
+const BTN_MUSIC_CLOSE = "images/global/icon_music_close.png";
 
 let btn_music;
 

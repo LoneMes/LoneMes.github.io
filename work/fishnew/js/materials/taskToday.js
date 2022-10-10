@@ -8,8 +8,8 @@ import TaskLIst from "./taskLIst.js";
 let isFirstToday = false; // 今天是否首次登录
 let isFirstTask = false; // 今天是否还可以做首胜任务, 如果为false说明已经做了
 
-const NPC_SRC = "/images/assets/girl1.png"; //"https://s1.ax1x.com/2022/10/03/xMxmWT.png";
-const TASK_SRC = "/images/gameing/icon-girl1.png"; // 任务列表图标
+const NPC_SRC = "images/assets/girl1.png"; //"https://s1.ax1x.com/2022/10/03/xMxmWT.png";
+const TASK_SRC = "images/gameing/icon-girl1.png"; // 任务列表图标
 
 const texts = ["嗯哼，你好，我叫珊瑚礁，我这里是每日委托区，每天首次通关的话，会有额外奖励喔。", "代我去向人鱼公主问好吧，只要将圆圈全部套在柱子上就能传送到海底宫殿觐见人鱼公主了...", "当然不会白白让你帮忙，嗯哼，去吧！"];
 const texts2 = ["每天都需要和人鱼公主通信，代我去向人鱼公主问好吧，只要将圆圈全部套在柱子上就能见到人鱼公主本人了。"];

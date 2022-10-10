@@ -2,7 +2,7 @@
 import Sprite from "../base/sprite.js";
 import { random } from "../base/util.js";
 
-const PAO_SRC = "/images/gameing/pao.png";
+const PAO_SRC = "images/gameing/pao.png";
 
 let pao;
 

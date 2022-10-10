@@ -1,6 +1,6 @@
 import Sprite from "../base/sprite.js";
 import { makeImgSize } from "../base/util.js";
-const BG_IMG_SRC = "/images/assets/back1.jpg"; //"https://s1.ax1x.com/2022/09/19/x9y16s.jpg";
+const BG_IMG_SRC = "images/assets/back1.jpg"; //"https://s1.ax1x.com/2022/09/19/x9y16s.jpg";
 // const BG_IMG2_SRC = "https://s1.ax1x.com/2022/09/19/x9yllj.jpg";
 // const BG_IMG3_SRC = "https://s1.ax1x.com/2022/09/19/x9yy0x.jpg";
 

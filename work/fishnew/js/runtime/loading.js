@@ -4,9 +4,9 @@ import Sprite from "../base/sprite.js";
 const t1 = "抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。";
 const t2 = "适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。";
 
-const LOGO_SRC = "/images/start/logo.png";
-const START_SRC = "/images/start/btn-start.png";
-const BACK_SRC = "/images/start/fish-back.png";
+const LOGO_SRC = "images/start/logo.png";
+const START_SRC = "images/start/btn-start.png";
+const BACK_SRC = "images/start/fish-back.png";
 
 let logo;
 let start;

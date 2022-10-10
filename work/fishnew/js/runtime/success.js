@@ -4,14 +4,14 @@ import Userinfo from "../materials/userinfo.js";
 import MessageServer from "../runtime/message.js";
 import { refreshFishData } from "../runtime/fish.js";
 import { getFishWeight } from "../base/util.js";
-const BG_IMG_SRC = "/packageSuccess/assets/success_back.jpg"; //"https://s1.ax1x.com/2022/10/04/xl1Jne.jpg";
+const BG_IMG_SRC = "packageSuccess/assets/success_back.jpg"; //"https://s1.ax1x.com/2022/10/04/xl1Jne.jpg";
 const BG_WIDTH = 750;
 const BG_HEIGHT = 1333;
 
-const BTN_SRC = "/packageSuccess/assets/success-btn.png";
+const BTN_SRC = "packageSuccess/assets/success-btn.png";
 // const BTN_RANK_SRC = "packageSuccess/assets/btn_rank.png";
-const LOVE_IMG_SRC = "/packageSuccess/assets/love.png";
-const NPC_SRC = "/packageSuccess/assets/girl3.png"; //"https://s1.ax1x.com/2022/10/04/xQ4cIH.png";
+const LOVE_IMG_SRC = "packageSuccess/assets/love.png";
+const NPC_SRC = "packageSuccess/assets/girl3.png"; //"https://s1.ax1x.com/2022/10/04/xQ4cIH.png";
 
 // 首次通关
 const texts1 = ["感谢你，陆地来的使者，我是住在海底宫殿的娜美，我要送你一些珍贵的小鱼，这是我们友谊的象征。", "以后也要常来我的宫殿找我玩呀。不过有一件事我很担心...", "在大洋的深处，有一个黑暗的秘密，最近那个地方有点异样...", "抱歉，我不应该初次见面就说这些，等下次你来时我再跟你细说吧。"];

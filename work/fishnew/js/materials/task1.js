@@ -6,9 +6,9 @@ import { refreshUserInfo } from "../runtime/control.js";
 import MessageServer from "../runtime/message.js";
 import TaskLIst from "./taskLIst.js";
 
-const NPC_SRC = "/images/assets/girl0.png"; //"https://s1.ax1x.com/2022/09/25/xEip2d.png";
-const FIRST_BACK = "/images/assets/task1back.jpg"; //"https://s1.ax1x.com/2022/09/29/xnt2se.jpg";
-const TASK_SRC = "/images/gameing/icon-girl.png"; // 任务列表图标
+const NPC_SRC = "images/assets/girl0.png"; //"https://s1.ax1x.com/2022/09/25/xEip2d.png";
+const FIRST_BACK = "images/assets/task1back.jpg"; //"https://s1.ax1x.com/2022/09/29/xnt2se.jpg";
+const TASK_SRC = "images/gameing/icon-girl.png"; // 任务列表图标
 
 const texts = ["嗨，欢迎光临海滨小镇，我叫莎莎，看起来你要和我们在这里生活一段时间了，那还等什么，开始吧！", "现在你的水族箱里只有3条小鱼，你需要精心照料它们，它们会随着时间慢慢长大…", "看到水中这些圆圈了吗，你能尝试把一个圆圈套在柱子上吗？只要点击两侧的按钮就能产生冲击力，试试看吧！"];
 const texts2 = ["尝试把圈圈套在柱子上吧，你能做到的！"];
