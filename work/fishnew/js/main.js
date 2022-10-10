@@ -50,7 +50,7 @@ export default class Main {
     ThreeCanvas.onLoad(this.bindGameSuccess);
 
     window.addEventListener("resize", this.bindResize, false);
-    console.log("加载完毕");
+    // console.log("加载完毕");
   }
 
   // 用户改变窗口大小
@@ -155,7 +155,7 @@ export default class Main {
    * ================== **/
   onTouch(e) {
     e.preventDefault();
-    console.log(e);
+    // console.log(e);
     const x = e.touches ? e.touches[0].clientX : e.clientX;
     const y = e.touches ? e.touches[0].clientY : e.clientY;
 

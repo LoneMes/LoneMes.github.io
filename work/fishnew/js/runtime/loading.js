@@ -29,7 +29,7 @@ export async function init(bindCheckLoaded) {
   // todo check 这里发起请求 进行同步
   // await syncCloudUserInfo();
   bindCheckLoaded("sync");
-  console.log("是这里卡吗");
+  // console.log("是这里卡吗");
 }
 
 export function destroy() {
@@ -50,7 +50,7 @@ export function checkProgress(allAssets) {
 
 export function renderLoading(ctx, isDone) {
   ctx.fillStyle = "#1d9fd0";
-  console.log("渲染：", isDone);
+  // console.log("渲染：", isDone);
   ctx.font = "12px Patrick Hand, -apple-system, BlinkMacSystemFont, PingFang SC, sans-serif";
   ctx.fillStyle = "#1d9fd0";
   ctx.fillRect(0, 0, window.canvasWidth, window.canvasHeight);

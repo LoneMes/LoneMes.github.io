@@ -10,17 +10,17 @@ export default class Music {
     instance = this;
 
     this.playing = false;
-    this.bgmAudio = document.createElement('audio');
+    this.bgmAudio = document.createElement("audio");
     this.bgmAudio.loop = true;
-    this.bgmAudio.src = "/audio/back.mp3";
+    this.bgmAudio.src = "audio/back.mp3";
 
-    this.btnAudio = document.createElement('audio');
-    this.btnAudio.src = "/audio/btn.mp3";
+    this.btnAudio = document.createElement("audio");
+    this.btnAudio.src = "audio/btn.mp3";
 
-    this.successAudio = document.createElement('audio');
-    this.successAudio.src = "/audio/success.mp3";
+    this.successAudio = document.createElement("audio");
+    this.successAudio.src = "audio/success.mp3";
 
-    this.isCanPlay = window.localStorage.getItem("music-play") !== 'false';
+    this.isCanPlay = window.localStorage.getItem("music-play") !== "false";
     // console.log("是否可以播放音乐：", this.isCanPlay);
 
     if (this.isCanPlay) {
@@ -49,7 +49,6 @@ export default class Music {
       this.isCanPlay = false;
       this.pauseBgm();
       window.localStorage.setItem("music-play", false);
-      
     } else {
       this.isCanPlay = true;
       this.playBgm();
