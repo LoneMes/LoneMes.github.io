@@ -115,6 +115,7 @@ let labelRenderer; // 2D标签渲染器
 let title2d; // 2D标签 - 头部标题
 let label2d; // 2D标签 - 右侧说明
 let outlinePass; // 外边框
+let glitchPass; // 屏幕闪烁
 
 /** 初始化三要素 **/
 function init3boss() {
