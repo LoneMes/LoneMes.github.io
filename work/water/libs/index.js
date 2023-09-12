@@ -66,6 +66,7 @@ const users = [
   { n: "滴滴香小单", s: 100, w: "水滴计划由蓝色空间号独家赞助" },
   { n: "meloalright", s: 6.66 },
   { n: "松涛", s: 2, w: "做的非常棒" },
+  { n: "一雪君", s: 1 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
