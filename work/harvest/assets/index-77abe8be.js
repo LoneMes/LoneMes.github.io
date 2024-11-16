@@ -1,0 +1,1 @@
+const u=(t,c)=>{let e;return function(){clearTimeout(e),e=setTimeout(()=>{t.apply(this,arguments)},c)}},g=(t,c,e,d,s,a,i)=>{const n=document.createElement("canvas");n.width=a,n.height=i;const o=n.getContext("2d"),l=o.createLinearGradient(c,e,d,s);for(let r=0;r<t.length;r++)l.addColorStop(r,t[r]);return o.fillStyle=l,o.fillRect(0,0,a,i),n};export{u as d,g};
