@@ -68,6 +68,7 @@ const users = [
   { n: "松涛", s: 2, w: "做的非常棒" },
   { n: "一雪君", s: 1 },
   { n: "Thel'Vadamee", s: 1, w: "消灭人类暴政，世界属于三体！" },
+  { n: "缪可", s: 1 },
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
