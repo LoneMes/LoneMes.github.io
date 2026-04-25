@@ -70,6 +70,7 @@ const users = [
   { n: "Thel'Vadamee", s: 1, w: "消灭人类暴政，世界属于三体！" },
   { n: "缪可", s: 1 },
   { n: "秦至宁", s: 5, w: "极光永不消逝！" },
+  { n: "Lit.D", s: 0.01, w: "消灭人类暴政，世界属于三体"}
 ];
 let loadingCount = 3; // 总共有多少资源需要加载
 let loadingPercent = 0; // 当前加载进度
